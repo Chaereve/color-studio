@@ -7,17 +7,13 @@
 <p align="center">
   <a href="README.md"><img alt="English" src="https://img.shields.io/badge/English-1a3fd6?style=for-the-badge"></a>&nbsp;
   <a href="README.vi.md"><img alt="Tiếng Việt" src="https://img.shields.io/badge/Ti%E1%BA%BFng%20Vi%E1%BB%87t-22d3ee?style=for-the-badge"></a>&nbsp;
-  <a href="README.zh.md"><img alt="中文" src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.ko.md"><img alt="한국어" src="https://img.shields.io/badge/%ED%95%9C%EA%B5%AD%EC%96%B4-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.ja.md"><img alt="日本語" src="https://img.shields.io/badge/%E6%97%A5%E6%9C%AC%E8%AA%9E-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.es.md"><img alt="Español" src="https://img.shields.io/badge/Espa%C3%B1ol-1a3fd6?style=for-the-badge"></a>
 </p>
 
 Công cụ **xem, trộn và xuất bảng màu Photoshop (`.aco`)** — chạy **ngay trên trình duyệt**. Không cần cài đặt, không cần đăng ký, không tải dữ liệu lên mạng.
 
 > Mọi dữ liệu được xử lý **hoàn toàn cục bộ** trên máy/điện thoại của bạn.
 
-**🌐 Giao diện đa ngôn ngữ (6 ngôn ngữ):** Tiếng Việt, English, 中文 (简体), 한국어, 日本語, Español — đổi trong **⚙️ Cài đặt**.
+**🌐 Song ngữ:** Tiếng Việt · English — đổi ngay ở thanh trên cùng hoặc trong **⚙️ Cài đặt**.
 
 ---
 
@@ -78,18 +74,18 @@ Tách thành 2 tab — **🧩 Tạo màu** và **🔍 Phân tích**:
 - **PNG / SVG / CSS / JSON / TXT** với tùy chọn bố cục, kích thước, nhãn, nền (kể cả trong suốt).
 - **Xuất .aco** (v2, có tên màu) từ các màu đã chọn.
 
-### 🌙 Giao diện — glassmorphism
-- Thiết kế **Glassmorphism**: bề mặt kính mờ, hiệu ứng blur và ánh sáng dịu — trau chuốt như macOS/iOS.
-- Chủ đề **tối / sáng / tự động** (mặc định theo hệ thống).
-- **6 ngôn ngữ**: Tiếng Việt, English, 中文 (简体), 한국어, 日本語, Español — đổi trong **⚙️ Cài đặt**.
-- Animation mượt, giao diện ưu tiên mobile (nav dưới cùng, bottom-sheet, nút to vừa tay).
+### 🌙 Giao diện — Liquid Glass (chỉ nền tối)
+- Chất liệu **Liquid Glass**: blur nền thật kèm tăng bão hòa, viền khúc xạ và gờ sáng ở mép trên của các bề mặt kính.
+- **Chỉ chạy nền tối** — giao diện gần như không màu để màu của bạn là thứ duy nhất lên màu.
+- Gọn từ 7 tab rời rạc xuống **4 nhóm: Xem · Tạo · Phân tích · Tệp**.
+- Dùng **icon SVG nét** thay emoji, hệ thống chữ có phân cấp rõ ràng, chuyển động chỉ ở mức màu sắc/độ mờ — không nảy, không phát sáng.
+- Ánh sáng nền phía sau lớp kính nhuốm theo bảng màu bạn đang mở.
+- Tương thích tốt trên màn hình nhỏ.
 
 ### ⚙️ Cài đặt
-- **Giao diện** — chủ đề sáng, tối hoặc tự động.
-- **Màu nhấn** — đổi màu toàn bộ giao diện (logo, tab, nút, hiệu ứng phát sáng).
-- **Ngôn ngữ** và **cỡ chữ** (nhỏ / vừa / lớn).
-- **Âm thanh** — phát âm thanh nhẹ khi click, copy và thông báo (bật/tắt).
-- Bật/tắt **hiệu ứng chuyển động**, **xóa dữ liệu đã lưu**, và mục **Giới thiệu**.
+- **Ngôn ngữ** — Tiếng Việt / English.
+- **Cỡ chữ** (nhỏ / vừa / lớn).
+- **Xóa dữ liệu đã lưu** và mục **Giới thiệu**.
 
 ### 📲 Cài làm app (PWA)
 - Cài được trên **máy tính (Windows/macOS/Linux)** và **điện thoại (Android/iOS)**.
@@ -113,24 +109,18 @@ Mở `index.html` bằng trình duyệt bất kỳ (nhấp đúp), hoặc truy c
 3. Mở tab **🎨 Trộn màu** → thêm màu → xem kết quả trộn ngay.
 4. Bấm **⬇ Xuất ảnh & dữ liệu** để tải bảng màu.
 5. Mở tab **📐 Gradient** → kéo thả file `.grd` để xem và chỉnh sửa gradient Photoshop.
-6. Mở **⚙️ Cài đặt** để đổi chủ đề, màu nhấn, ngôn ngữ và cỡ chữ.
+6. Mở **⚙️ Cài đặt** (hoặc bấm **VI / EN** ở thanh trên cùng) để đổi ngôn ngữ và cỡ chữ.
 
 ---
 
-## 🌐 Ngôn ngữ (6)
+## 🌐 Ngôn ngữ (2)
 
-Mở **⚙️ Cài đặt** (nút bánh răng, góc phải trên) và chọn ngôn ngữ trong mục **Ngôn ngữ**: Tiếng Việt, English, 中文 (简体), 한국어, 日本語, Español. Toàn bộ giao diện đổi ngay lập tức và lựa chọn được ghi nhớ cho những lần sau.
-
-**README và Hướng dẫn sử dụng của repo này có đủ 6 ngôn ngữ:**
+Đổi bằng nút **VI / EN** ở thanh trên cùng, hoặc qua **⚙️ Cài đặt → Ngôn ngữ**: Tiếng Việt · English. Toàn bộ giao diện đổi ngay lập tức và lựa chọn được ghi nhớ cho những lần sau.
 
 | Ngôn ngữ | README | Hướng dẫn sử dụng |
 |----------|--------|-------------------|
 | 🇬🇧 English | [README.md](README.md) | [USER_GUIDE.md](USER_GUIDE.md) |
 | 🇻🇳 Tiếng Việt | [README.vi.md](README.vi.md) | [USER_GUIDE.vi.md](USER_GUIDE.vi.md) |
-| 🇨🇳 中文 (简体) | [README.zh.md](README.zh.md) | [USER_GUIDE.zh.md](USER_GUIDE.zh.md) |
-| 🇰🇷 한국어 | [README.ko.md](README.ko.md) | [USER_GUIDE.ko.md](USER_GUIDE.ko.md) |
-| 🇯🇵 日本語 | [README.ja.md](README.ja.md) | [USER_GUIDE.ja.md](USER_GUIDE.ja.md) |
-| 🇪🇸 Español | [README.es.md](README.es.md) | [USER_GUIDE.es.md](USER_GUIDE.es.md) |
 
 ---
 
@@ -166,8 +156,8 @@ Mở ACO ở tab **Trộn màu** → bỏ chọn màu không muốn → bấm **
 
 ## 📚 Hướng dẫn
 
-Hướng dẫn sử dụng (đủ 6 ngôn ngữ):
-- 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md) · 🇨🇳 [USER_GUIDE.zh.md](USER_GUIDE.zh.md) · 🇰🇷 [USER_GUIDE.ko.md](USER_GUIDE.ko.md) · 🇯🇵 [USER_GUIDE.ja.md](USER_GUIDE.ja.md) · 🇪🇸 [USER_GUIDE.es.md](USER_GUIDE.es.md)
+Hướng dẫn sử dụng:
+- 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md)
 
 ---
 

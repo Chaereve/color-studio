@@ -7,17 +7,13 @@
 <p align="center">
   <a href="README.md"><img alt="English" src="https://img.shields.io/badge/English-22d3ee?style=for-the-badge"></a>&nbsp;
   <a href="README.vi.md"><img alt="Tiếng Việt" src="https://img.shields.io/badge/Ti%E1%BA%BFng%20Vi%E1%BB%87t-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.zh.md"><img alt="中文" src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.ko.md"><img alt="한국어" src="https://img.shields.io/badge/%ED%95%9C%EA%B5%AD%EC%96%B4-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.ja.md"><img alt="日本語" src="https://img.shields.io/badge/%E6%97%A5%E6%9C%AC%E8%AA%9E-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.es.md"><img alt="Español" src="https://img.shields.io/badge/Espa%C3%B1ol-1a3fd6?style=for-the-badge"></a>
 </p>
 
 A tool to **view, mix, and export Photoshop (`.aco`) color palettes** — running entirely **in your browser**. No installation, no sign-up, no data upload.
 
 > Everything is processed **100% locally** on your device.
 
-**🌐 Multilingual UI (6 languages):** Vietnamese, English, 中文 (简体), 한국어, 日本語, Español — switch in **⚙️ Settings**.
+**🌐 Bilingual UI:** Tiếng Việt · English — switch instantly from the header or in **⚙️ Settings**.
 
 ---
 
@@ -31,7 +27,7 @@ A tool to **view, mix, and export Photoshop (`.aco`) color palettes** — runnin
 - **Advanced search** — filter by ranges with `hue:0-60`, `sat:>50`, `light:40-80`, or find near-colors with `similar:#FF0000`.
 
 ### ✏️ Edit palette (in-place)
-- **Rename** colors inline (✏️), **delete** (🗑), or **add** new colors — then **save back to .aco**.
+- **Rename** colors inline, **delete**, or **add** new colors — then **save back to .aco**.
 - Full **undo / redo** (up to 60 steps).
 - **Right-click** any swatch for a quick menu (copy / details / rename / export / delete).
 
@@ -50,7 +46,7 @@ A tool to **view, mix, and export Photoshop (`.aco`) color palettes** — runnin
 - Generate 1–100 random colors for each "member", either fully random or within a chosen color family (red / orange / yellow / green / cyan / blue / purple / pink), with optional no-duplicate mode.
 
 ### 🛠 Design tools
-Split into two tabs — **🧩 Create** and **🔍 Analyze**:
+Grouped under the **Create** and **Analyze** tabs:
 - **Palette Generator** — complementary / analogous / triadic / split / tetradic.
 - **Gradient Generator** — linear / radial / **conic** CSS gradient with copy-to-clipboard.
 - **Image → Palette / Eyedropper** — click an image to pick a color, extract dominant colors, and **export them straight to .aco**.
@@ -78,18 +74,18 @@ Split into two tabs — **🧩 Create** and **🔍 Analyze**:
 - **PNG / SVG / CSS / JSON / TXT** with layout, size, label and background options (including transparent).
 - **ACO export** (v2, with color names) of your selected colors.
 
-### 🌙 UI — glassmorphism
-- **Glassmorphism** design: frosted-glass panels, soft blur and ambient light — polished like macOS/iOS.
-- **Dark / light / auto** theme (follows your system by default).
-- **6 languages**: Vietnamese, English, 中文 (简体), 한국어, 日本語, Español — switchable in **⚙️ Settings**.
-- Smooth animations and a mobile-first layout (bottom nav, bottom sheets, large touch targets).
+### 🌙 UI — Liquid Glass (dark only)
+- **Liquid Glass** material: real backdrop blur with saturation, refractive rims and a specular top edge on glass surfaces.
+- **Dark only** — the interface stays achromatic so your palette is the only thing in colour.
+- **4 tab groups** instead of 7 scattered tabs: **View · Create · Analyze · Files**.
+- **Stroke SVG icons** instead of emoji, a restrained type system, and motion limited to colour/opacity — no bouncing or glow.
+- The ambient light behind the glass picks up the colours of the palette you have open.
+- Responsive down to small phones.
 
 ### ⚙️ Settings
-- **Appearance** — light, dark or auto theme.
-- **Accent color** — recolor the whole UI (logo, tabs, buttons, glow).
-- **Language** and **font size** (small / medium / large).
-- **Sound effects** — subtle sounds for clicks, copies and notifications (on/off).
-- **Motion effects** on/off, **clear saved data**, and an **About** box.
+- **Language** — Tiếng Việt / English.
+- **Font size** (small / medium / large).
+- **Clear saved data** and an **About** box.
 
 ### 📲 Install as an app (PWA)
 - Installable on **desktop (Windows/macOS/Linux)** and **mobile (Android/iOS)**.
@@ -113,24 +109,18 @@ Just open `index.html` in any browser (double-click it), or visit the deployed U
 3. Open the **🎨 Mix colors** tab → add colors → see the mix result instantly.
 4. Click **⬇ Export image & data** to download the palette.
 5. Open the **📐 Gradient** tab → drop a `.grd` file to view and edit Photoshop gradients.
-6. Open the **⚙️ Settings** tab to switch theme, accent color, language and font size.
+6. Open **⚙️ Settings** (or use **VI / EN** in the header) to switch language and font size.
 
 ---
 
-## 🌐 Languages (6)
+## 🌐 Languages (2)
 
-Open **⚙️ Settings** (the gear button, top-right) and pick a language from the **Language** menu: Vietnamese, English, 中文 (简体), 한국어, 日本語, Español. The whole interface switches instantly and your choice is remembered across sessions.
-
-This repository's **README and User Guide are available in all 6 languages**:
+Switch with the **VI / EN** control in the header, or via **⚙️ Settings → Language**: Tiếng Việt · English. The whole interface switches instantly and your choice is remembered across sessions.
 
 | Language | README | User Guide |
 |----------|--------|------------|
 | 🇬🇧 English | [README.md](README.md) | [USER_GUIDE.md](USER_GUIDE.md) |
 | 🇻🇳 Tiếng Việt | [README.vi.md](README.vi.md) | [USER_GUIDE.vi.md](USER_GUIDE.vi.md) |
-| 🇨🇳 中文 (简体) | [README.zh.md](README.zh.md) | [USER_GUIDE.zh.md](USER_GUIDE.zh.md) |
-| 🇰🇷 한국어 | [README.ko.md](README.ko.md) | [USER_GUIDE.ko.md](USER_GUIDE.ko.md) |
-| 🇯🇵 日本語 | [README.ja.md](README.ja.md) | [USER_GUIDE.ja.md](USER_GUIDE.ja.md) |
-| 🇪🇸 Español | [README.es.md](README.es.md) | [USER_GUIDE.es.md](USER_GUIDE.es.md) |
 
 ---
 
@@ -166,8 +156,8 @@ Open the ACO in the **Mix colors** tab → click to deselect the colors you don'
 
 ## 📚 Guides
 
-User guide (all 6 languages):
-- 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md) · 🇨🇳 [USER_GUIDE.zh.md](USER_GUIDE.zh.md) · 🇰🇷 [USER_GUIDE.ko.md](USER_GUIDE.ko.md) · 🇯🇵 [USER_GUIDE.ja.md](USER_GUIDE.ja.md) · 🇪🇸 [USER_GUIDE.es.md](USER_GUIDE.es.md)
+User guide:
+- 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md)
 
 ---
 

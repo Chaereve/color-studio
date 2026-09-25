@@ -25,15 +25,13 @@ A tool to view, mix, and export Photoshop (`.aco`) color palettes right in your 
 ## 1. Getting started
 
 - Open `index.html` in any browser (Chrome, Edge, Firefox, Safari…).
-- There are **7 tabs** at the top:
-  - **📁 View ACO** — view, edit and export colors from a `.aco` file.
-  - **🎨 Mix colors** — blend several colors into one new color.
-  - **🎲 Random colors** — generate random colors for members.
-  - **🧩 Create** — palette generator, gradient, image → palette, presets.
-  - **🔍 Analyze** — contrast, color blindness, accessibility audit, statistics.
-  - **📦 Batch** — merge multiple `.aco` files.
-  - **📐 Gradient** — open and edit Photoshop `.grd` gradients.
-- A **⚙️ Settings** button (top-right, next to the theme button) opens the settings panel — theme, accent color, language, font size, effects, clear data and About.
+- There are **4 tab groups** at the top:
+  - **View** — open, search, edit and export colors from a `.aco` / `.grd` file.
+  - **Create** — color mixer, random colors, harmony palettes, gradient builder, image → palette, built-in palettes.
+  - **Analyze** — contrast checker, color-blind simulation, accessibility audit, palette statistics.
+  - **Files** — merge multiple `.aco` files, open and edit Photoshop `.grd` gradients.
+- The **VI / EN** control in the header switches language instantly.
+- A **⚙️ Settings** button (top-right) opens the settings panel — language, font size, clear data and About.
 
 ---
 
@@ -198,13 +196,10 @@ The **⚙️ Settings** tab lets you personalize the app. Every choice is saved 
 
 | Setting | What it does |
 |---------|--------------|
-| **Appearance** | **Light**, **Dark** or **Auto** (follows your system). The top-right 🌙/☀️ button still toggles light/dark instantly. |
-| **Accent color** | Pick a highlight color — it recolors the logo text, active tab, buttons and glow effects. |
-| **Language** | Choose from 6 languages: Vietnamese, English, 中文 (简体), 한국어, 日本語, Español. |
+| **Language** | Choose Tiếng Việt or English. |
 | **Font size** | Small / Medium / Large. |
-| **Sound effects** | Play subtle sounds for clicks, copies and notifications (on/off). |
 | **Motion effects** | Turn animations on or off. |
-| **Clear saved data** | Remove mix history, language, theme and all stored preferences, then reload. |
+| **Clear saved data** | Remove mix history, language, font size and all stored preferences, then reload. |
 | **About** | A short description of the app. |
 
 ---

@@ -26,20 +26,18 @@ Công cụ xem, trộn và xuất bảng màu Photoshop (`.aco`) chạy ngay tr�
 
 - Mở file `index.html` bằng bất kỳ trình duyệt nào (Chrome, Edge, Firefox, Safari…).
 - Trang có **7 tab** chính ở đầu:
-  - **📁 Xem ACO** — xem, chỉnh sửa, xuất bảng màu từ file `.aco`.
-  - **🎨 Trộn màu** — pha trộn nhiều màu thành một màu mới.
-  - **🎲 Random màu** — sinh màu ngẫu nhiên cho từng thành viên.
-  - **🧩 Tạo màu** — palette generator, gradient, trích màu từ ảnh, presets.
-  - **🔍 Phân tích** — contrast, mù màu, audit khả năng truy cập, thống kê.
-  - **📦 Batch** — gộp nhiều file `.aco`.
-  - **📐 Gradient** — mở và chỉnh sửa file gradient `.grd` của Photoshop.
-- Nút **⚙️ Cài đặt** (góc phải trên, cạnh nút sáng/tối) mở bảng cài đặt — chủ đề, màu nhấn, ngôn ngữ, cỡ chữ, hiệu ứng, xóa dữ liệu và Giới thiệu.
+  - **Xem** — mở, tìm kiếm, chỉnh sửa và xuất bảng màu từ file `.aco` / `.grd`.
+  - **Tạo** — trộn màu, random màu, palette hài hòa, tạo gradient, trích màu từ ảnh, bộ màu có sẵn.
+  - **Phân tích** — kiểm tra tương phản, mô phỏng mù màu, đánh giá truy cập, thống kê palette.
+  - **Tệp** — gộp nhiều file `.aco`, mở và chỉnh sửa file gradient `.grd` của Photoshop.
+- Nút **⚙️ Cài đặt** (góc phải trên) mở bảng cài đặt — ngôn ngữ, cỡ chữ, xóa dữ liệu và Giới thiệu.
+- Nút **VI / EN** ở thanh trên cùng đổi ngôn ngữ ngay lập tức.
 
 ---
 
 ## 2. Ngôn ngữ
 
-- Mở **⚙️ Cài đặt** (góc phải trên) và chọn ngôn ngữ trong mục **Ngôn ngữ**: Tiếng Việt, English, 中文 (简体), 한국어, 日本語, Español.
+- Bấm **VI / EN** ở thanh trên cùng, hoặc mở **⚙️ Cài đặt → Ngôn ngữ** và chọn: Tiếng Việt hoặc English.
 - Toàn bộ giao diện đổi ngay lập tức và lựa chọn được ghi nhớ cho những lần mở sau.
 
 ---
@@ -129,9 +127,9 @@ Sinh màu ngẫu nhiên, mỗi màu ứng với một **thành viên**.
 
 ## 6. Công cụ — Tạo màu & Phân tích
 
-Công cụ được tách thành hai tab: **🧩 Tạo màu** và **🔍 Phân tích**.
+Công cụ nằm trong hai nhóm: **Tạo** và **Phân tích**.
 
-### Tab 🧩 Tạo màu
+### Nhóm Tạo
 | Công cụ | Chức năng |
 |---------|-----------|
 | 🧩 **Palette Generator** | Tạo palette hài hòa (complementary, analogous, triadic, split, tetradic) từ một màu gốc. |
@@ -139,7 +137,7 @@ Công cụ được tách thành hai tab: **🧩 Tạo màu** và **🔍 Phân t
 | 🖼 **Image → Palette / Chấm màu** | Chấm vào ảnh để lấy 1 màu, trích các màu chủ đạo, và **xuất thẳng ra .aco**. |
 | 📦 **Presets & Templates** | Bấm một cái là có ngay palette cài sẵn (Material, Tailwind, Brand Colors, Pastel, Earth Tones). |
 
-### Tab 🔍 Phân tích
+### Nhóm Phân tích
 | Công cụ | Chức năng |
 |---------|-----------|
 | 🔳 **Contrast Checker** | Kiểm tra tỷ lệ tương phản WCAG giữa chữ và nền, kèm huy hiệu AA/AAA. |
@@ -153,7 +151,7 @@ Ngoài ra, bấm nút **ℹ️** trên bất kỳ thẻ màu nào sẽ mở **b�
 
 ## 7. Xử lý nhiều file (Batch)
 
-Trong tab **📦 Batch**:
+Trong nhóm **Tệp → Gộp nhiều file**:
 
 - Bấm **Mở file** và chọn **nhiều file `.aco`** cùng lúc (hoặc kéo thả).
 - Danh sách hiển thị từng file kèm số màu; bấm ✕ để bỏ từng file.
@@ -164,7 +162,7 @@ Trong tab **📦 Batch**:
 
 ## 8. Tab "Gradient (.grd)"
 
-Trong tab **📐 Gradient** bạn có thể mở, chỉnh sửa và xuất file gradient Photoshop (`.grd`, v3 & v5).
+Trong nhóm **Tệp → Gradient .grd** bạn có thể mở, chỉnh sửa và xuất file gradient Photoshop (`.grd`, v3 & v5).
 
 ### Mở file
 - Bấm **📁 Mở file .grd** (hoặc kéo thả file `.grd` vào tab) để tải các gradient.
@@ -199,12 +197,10 @@ Tab **⚙️ Cài đặt** cho phép bạn cá nhân hóa ứng dụng. Mọi l�
 | Mục | Chức năng |
 |-----|-----------|
 | **Giao diện** | **Sáng**, **Tối** hoặc **Tự động** (theo hệ thống). Nút 🌙/☀️ ở góc phải trên vẫn đổi sáng/tối nhanh. |
-| **Màu nhấn** | Chọn màu làm nổi bật — đổi màu logo, tab đang chọn, nút và hiệu ứng phát sáng. |
-| **Ngôn ngữ** | Chọn 1 trong 6 ngôn ngữ: Tiếng Việt, English, 中文 (简体), 한국어, 日本語, Español. |
+| **Ngôn ngữ** | Chọn Tiếng Việt hoặc English. |
 | **Cỡ chữ** | Nhỏ / Vừa / Lớn. |
-| **Âm thanh** | Phát âm thanh nhẹ khi click, copy và thông báo (bật/tắt). |
 | **Hiệu ứng chuyển động** | Bật hoặc tắt animation. |
-| **Xóa dữ liệu đã lưu** | Xóa lịch sử trộn, ngôn ngữ, chủ đề và mọi tùy chọn đã lưu, rồi tải lại. |
+| **Xóa dữ liệu đã lưu** | Xóa lịch sử trộn, ngôn ngữ, cỡ chữ và mọi tùy chọn đã lưu, rồi tải lại. |
 | **Giới thiệu** | Mô tả ngắn về ứng dụng. |
 
 ---
