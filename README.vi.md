@@ -1,4 +1,4 @@
-# 🎨 Chaereve ColorLab
+# 🎨 Color Studio
 
 <p align="center">
   <a href="https://github.com/chaereve/chaereve-colorlab/releases"><img alt="Tải xuống" src="https://img.shields.io/badge/T%E1%BA%A3i%20xu%E1%BB%91ng-2ea043?style=for-the-badge"></a>

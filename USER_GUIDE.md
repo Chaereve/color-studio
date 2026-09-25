@@ -1,4 +1,4 @@
-# 🎨 Chaereve ColorLab — User Guide
+# 🎨 Color Studio — User Guide
 
 A browser tool for viewing and editing Photoshop color swatches (`.aco`) and gradients (`.grd`).
 **No install, nothing uploaded** — everything is processed locally on your machine.

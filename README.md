@@ -1,4 +1,4 @@
-# 🎨 Chaereve ColorLab
+# 🎨 Color Studio
 
 <p align="center">
   <a href="https://github.com/chaereve/chaereve-colorlab/releases"><img alt="Download" src="https://img.shields.io/badge/Download-2ea043?style=for-the-badge"></a>

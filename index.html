@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<title>Chaereve ColorLab</title>
+<title>Color Studio</title>
 
 <!-- PWA -->
 <link rel="manifest" href="./manifest.webmanifest">
@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="ColorLab">
+<meta name="apple-mobile-web-app-title" content="Color Studio">
 <link rel="apple-touch-icon" href="./icons/icon-180.png">
 <link rel="icon" href="./icons/icon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
@@ -959,7 +959,7 @@ input[type="range"].ed-hue::-moz-range-thumb { background: var(--accent); }
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <symbol id="i-tick" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
-<symbol id="i-logo" viewBox="0 0 24 24"><path d="M15 8.824C15 11.455 13 12 12 12s-3-.545-3-3.176C9 6.192 12 3 12 3s3 3.192 3 5.824zM3 15l.872.697a2.33 2.33 0 0 0 3.102-.171v0a2.33 2.33 0 0 1 3.164-.122l.18.154c.968.83 2.396.83 3.364 0l.18-.154a2.33 2.33 0 0 1 3.164.121v0a2.33 2.33 0 0 0 3.102.172L21 15m-.5 4-.442.442c-.86.86-2.255.86-3.116 0v0a2.203 2.203 0 0 0-2.99-.114l-.27.23c-.968.83-2.396.83-3.364 0l-.27-.23a2.203 2.203 0 0 0-2.99.114v0c-.86.86-2.255.86-3.116 0L3.5 19"/></symbol>
+<symbol id="i-logo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M3 16c1.403-.234 3.637-.293 5.945.243M16 21c-1.704-2.768-4.427-4.148-7.055-4.757m0 0C10.895 13.985 14.558 12 21 12h1M8.5 7C8 7 7 7.3 7 8.5S8 10 8.5 10 10 9.7 10 8.5 9 7 8.5 7z"/></symbol>
 <symbol id="i-colors" viewBox="0 0 24 24"><path d="M3 8V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2M3 8v6m0-6h6m12 0v6m0-6H9m12 6v4a2 2 0 0 1-2 2H9m12-6H9m-6 0v4a2 2 0 0 0 2 2h4m-6-6h6m0-6v6m0 0v6m6-12v12"/></symbol>
 <symbol id="i-gradient" viewBox="0 0 24 24"><path d="M4 5h16M4 19h16"/><rect width="10" height="4" x="7" y="10" rx="2"/></symbol>
 <symbol id="i-flask" viewBox="0 0 24 24"><path d="M8 3h2m6 0h-2m0 0v5.46a2 2 0 0 0 .272 1.007L15.75 12l3.495 5.992c.778 1.334-.184 3.008-1.727 3.008H6.482c-1.544 0-2.505-1.674-1.727-3.008L8.25 12l1.478-2.533A2 2 0 0 0 10 8.459V3m4 0h-4"/></symbol>
@@ -999,7 +999,7 @@ input[type="range"].ed-hue::-moz-range-thumb { background: var(--accent); }
 <aside class="rail">
     <a class="brand" href="#" onclick="return false">
         <span class="brand-mark"><svg class="i"><use href="#i-logo"/></svg></span>
-        <span class="brand-txt"><b>Chaereve</b><small>ColorLab</small></span>
+        <span class="brand-txt"><b>Color Studio</b><small>Palette &amp; Gradients</small></span>
     </a>
     <nav class="rail-nav" id="rail-nav" role="tablist" aria-label="Sections">
         <button class="nav-item tab active" data-tab="aco" role="tab" type="button" aria-selected="true">
@@ -1030,7 +1030,7 @@ input[type="range"].ed-hue::-moz-range-thumb { background: var(--accent); }
     <header class="mhead">
         <a class="brand" href="#" onclick="return false">
             <span class="brand-mark"><svg class="i"><use href="#i-logo"/></svg></span>
-            <span class="brand-txt"><b>Chaereve</b><small>ColorLab</small></span>
+            <span class="brand-txt"><b>Color Studio</b><small>Palette &amp; Gradients</small></span>
         </a>
         <div class="mhead-actions">
             <button class="icon-btn" id="install-btn-m" type="button" hidden title="Install app" aria-label="Install app">
@@ -1613,7 +1613,7 @@ en:
 "random.result.hint":"Click a color to copy it; the number is the member",
 "random.empty":"Click \"Randomize\" to generate colors",
 "random.member":"Member",
-"footer":"<b>Chaereve ColorLab</b> · View, mix &amp; export Photoshop color palettes and gradients right in your browser.<br>All data is processed locally on your device — nothing is uploaded to any server.",
+"footer":"<b>Color Studio</b> · View, mix &amp; export Photoshop color palettes and gradients right in your browser.<br>All data is processed locally on your device — nothing is uploaded to any server.",
 "pick.title":"Select colors to mix",
 "pick.all":"Select all",
 "pick.none":"Deselect",
@@ -1740,7 +1740,7 @@ en:
 "settings.clear.btn":"Clear data",
 "settings.clear.confirm":"Clear all saved data? This cannot be undone.",
 "settings.about":"About",
-"settings.about.desc":"<b>Chaereve ColorLab</b> reads, edits and mixes Photoshop color palettes and gradients (.aco &middot; .grd) right in your browser &mdash; no install needed. Interface language: English. Icons: <b>Majesticons</b> (MIT). Everything is processed locally on your device; nothing is uploaded.",
+"settings.about.desc":"<b>Color Studio</b> reads, edits and mixes Photoshop color palettes and gradients (.aco &middot; .grd) right in your browser &mdash; no install needed. Interface language: English. Icons: <b>Majesticons</b> (MIT). Everything is processed locally on your device; nothing is uploaded.",
 "sect.random":"Random colors",
 "grd.drop.main":"Drag & drop a <b>.grd</b> file here",
 "hint.search":"Filters: similar:#HEX · hue:0-60 · sat:&gt;50 · light:40-80",

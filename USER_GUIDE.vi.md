@@ -1,4 +1,4 @@
-# 🎨 Chaereve ColorLab — Hướng dẫn sử dụng
+# 🎨 Color Studio — Hướng dẫn sử dụng
 
 Công cụ xem và chỉnh bảng màu Photoshop (`.aco`) cùng gradient (`.grd`) ngay trên trình duyệt.
 **Không cần cài đặt, không tải dữ liệu lên mạng** — mọi thứ xử lý trên máy bạn.
