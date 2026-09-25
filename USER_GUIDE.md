@@ -1,274 +1,195 @@
-# 🎨 Chaereve ColorLab — User Guide
+# 🎨 Color Studio — User Guide
 
-A tool to view, mix, and export Photoshop (`.aco`) color palettes right in your browser.
-**No installation, no data upload** — everything runs locally on your device.
+A browser tool for viewing and editing Photoshop color swatches (`.aco`) and gradients (`.grd`).
+**No install, nothing uploaded** — everything is processed locally on your machine.
 
 ---
 
-## Table of contents
+## Contents
+
 1. [Getting started](#1-getting-started)
-2. [Language](#2-language)
-3. ["View ACO" tab](#3-view-aco-tab)
-4. ["Mix colors" tab](#4-mix-colors-tab)
-5. ["Random colors" tab](#5-random-colors-tab)
-6. [Design tools — Create & Analyze](#6-design-tools--create--analyze)
-7. [Batch processing](#7-batch-processing)
-8. [Gradient (.grd) tab](#8-gradient-grd-tab)
-9. [Settings](#9-settings)
-10. [Export image & data](#10-export-image--data)
-11. [Mix history](#11-mix-history)
-12. [Install as an app (PWA)](#12-install-as-an-app-pwa)
-13. [FAQ](#13-faq)
+2. [Font size & settings](#2-font-size--settings)
+3. [Tab 1 — ACO colors](#3-tab-1--aco-colors)
+4. [The color editor](#4-the-color-editor)
+5. [Bulk adjust & shortcuts](#5-bulk-adjust--shortcuts)
+6. [Tab 2 — .grd gradients](#6-tab-2--grd-gradients)
+7. [Tab 3 — Mix colors](#7-tab-3--mix-colors)
+8. [Tab 4 — Random colors](#8-tab-4--random-colors)
+9. [Install as an app (PWA)](#9-install-as-an-app-pwa)
+10. [FAQ](#10-faq)
 
 ---
 
 ## 1. Getting started
 
 - Open `index.html` in any browser (Chrome, Edge, Firefox, Safari…).
-- There are **7 tabs** at the top:
-  - **📁 View ACO** — view, edit and export colors from a `.aco` file.
-  - **🎨 Mix colors** — blend several colors into one new color.
-  - **🎲 Random colors** — generate random colors for members.
-  - **🧩 Create** — palette generator, gradient, image → palette, presets.
-  - **🔍 Analyze** — contrast, color blindness, accessibility audit, statistics.
-  - **📦 Batch** — merge multiple `.aco` files.
-  - **📐 Gradient** — open and edit Photoshop `.grd` gradients.
-- A **⚙️ Settings** button (top-right, next to the theme button) opens the settings panel — theme, accent color, language, font size, effects, clear data and About.
+- The app has **4 tabs**:
+  - **ACO colors** — open, browse, search and edit `.aco` palettes.
+  - **Gradients** — open and edit Photoshop `.grd` gradients.
+  - **Mix** — blend several colors by ratio.
+  - **Random** — generate random colors, one per member.
+- The **⚙️** button opens **Settings** — in the sidebar on desktop, in the header on mobile.
 
 ---
 
-## 2. Language
+## 2. Font size & settings
 
-- Open **⚙️ Settings** (top-right) and choose a language from the **Language** menu: Vietnamese, English, 中文 (简体), 한국어, 日本語, Español.
-- The whole interface switches instantly and your choice is remembered the next time you open the app.
+The interface is **English only**.
+
+- **⚙️ Settings → Font size**: Small / Medium / Large.
+- Choices are remembered. **Clear saved data** wipes the mix history and these options.
 
 ---
 
-## 3. "View ACO" tab
+## 3. Tab 1 — ACO colors
 
-### Open a file
-- **Drag & drop** a `.aco` file onto the center area, **or** click it to choose a file.
-- Supports ACO **v1 and v2**, reads **color names** and the RGB / HSB / CMYK / Lab / Grayscale color spaces.
+### Opening a file
+- **Drag and drop** an `.aco` (or `.grd`) file onto the panel, **or** click it to browse.
+- Supports **ACO v1 & v2**, reading **color names** and RGB / HSB / CMYK / Lab / Grayscale spaces.
+- Once loaded, the drop zone collapses to a compact bar — click it anytime to open another file.
 
-### View colors
-- Each color is shown as a card: **index number** (1, 2, 3…), a swatch, name, HEX, RGB and its original color space.
-- The index follows the **order in the ACO file** for easy cross-reference.
+### Browsing
+- Each color is a card with an **index** (1, 2, 3…), a color chip, its name, HEX, RGB and the original color space.
+- The index follows the **order inside the ACO file**.
 
-### Copy color codes
-- **Click a swatch** to copy its code (choose the format — HEX / RGB / HSL — in the format menu on the toolbar).
-- **📋 Copy all** copies everything as a HEX list, CSS variables, SCSS, JSON, or RGB.
+### Copying
+- **Click a card** to copy its code — HEX / RGB / HSL, chosen in the toolbar dropdown.
+- **Copy all** copies every selected color in that same format.
 
-### Select multiple colors
-- Click the **✓** in the corner of a card to select/deselect.
-- **☑ Select** → Select all / Deselect all / Invert.
+### Selecting
+- Click the **✓** in a card's corner to select / deselect it.
+- The **Select** menu offers: select all · deselect all · invert selection.
 
 ### Search & sort
-- **🔍** search by name, HEX or RGB.
-- Sort by original order, hue, lightness, saturation, or name.
+- The search box matches names, HEX or RGB.
+- Sort by: original order · hue · lightness · saturation · name.
 
 ### Advanced search
-Type special tokens in the search box to filter precisely:
-- `hue:0-60` — colors whose hue is in that range (e.g. reds/yellows).
-- `hue:>200` / `hue:<40` / `hue:120` — greater than, less than, or exact hue.
-- `sat:>50` — saturation above 50; `light:40-80` — lightness between 40 and 80.
-- `similar:#FF0000` — colors close to that color (RGB distance ≤ 80).
-- Normal words still work; you can combine several tokens.
+Type these straight into the search box:
+- `hue:0-60` — hue inside a range (red → yellow). `hue:>200`, `hue:<40`, `hue:120` also work.
+- `sat:>50` — saturation above 50. Supports `<`, `>` and ranges like `20-80`.
+- `light:40-80` — lightness inside a range.
+- `similar:#FF0000` — the closest colors get a white outline.
 
-### Edit the palette
-- **✏️ Rename** a color inline, **🗑 delete** one, or **➕ add** a new color.
-- Use **↩ Undo / ↪ Redo** to step backward/forward (up to 60 steps).
-- **Right-click** a swatch for a quick menu: copy, details, rename, export one color as `.aco`, or delete.
-- **💾 Save .aco** writes your edits back to a new `.aco` file.
+### Editing the palette
+- **Add** — pick a color in the square, then hit **Add**.
+- **Rename** — the pencil button on a card.
+- **Delete** — the trash button on a card.
+- **Reorder** — drag and drop cards.
+- **Right-click** a card for the quick menu (copy / details / rename / export .aco / delete).
+- **Undo / Redo** — 60 steps.
+- **Save .aco** — writes the whole palette back out to an `.aco` file (v2, with names).
+- **Export .aco** — exports only the selected colors.
 
-### Share palette
-- Click **🔗 Share** (in the toolbar) to copy a link like `…?palette=…`.
-- Opening that link loads the same palette — no server or account needed.
-
----
-
-## 4. "Mix colors" tab
-
-This tab works **standalone** — no need to open an ACO file first.
-
-### Add colors to the mix
-Two ways:
-1. **Color picker** + **➕ Add this color** — choose any color.
-2. **📁 Open ACO file** — pick a `.aco`, then a **selection grid** appears:
-   - All colors are selected (✓) by default.
-   - **Click a swatch** to exclude colors you **don't want to mix**.
-   - **Select all / Deselect / Invert** buttons.
-   - Click **➕ Add N colors to mix** to add the chosen colors.
-
-### Re-adjust colors without re-uploading
-- Click **🔁 Re-adjust colors** to **reopen the selection grid of the loaded ACO** (no re-upload needed).
-- Tick/untick, then click "Add colors to mix" — the app **adds the new colors and removes the ones you unticked**.
-
-### Color ratio
-- The ratio is **auto-equalized** by color count (e.g. 4 colors → 25% each).
-- **⚖️ Equalize ratio** resets it at any time.
-- **Drag a slider** to raise/lower a single color — the rest recalculates to total 100%.
-
-### Mix result
-- The result box shows the mixed color with **HEX / RGB / HSL**, updated instantly as you change ratios.
-- **📋 Copy HEX / RGB / HSL** for quick copying.
-- **💾 Save to history** to keep the mixed color.
+### Duplicates
+The **Duplicates** menu has three options:
+- **Mark / unmark** — outlines duplicate or near-identical colors in yellow.
+- **Remove identical codes** — keeps one color per HEX.
+- **Remove near-identical colors** — drops colors that sit very close to each other.
 
 ---
 
-## 5. "Random colors" tab
+## 4. The color editor
 
-Generates random colors, one per "member".
+One editor is used everywhere a color appears:
 
-- **Mode:** 🌈 Fully random, or 🎯 By color family (red / orange / yellow / green / cyan / blue / purple / pink).
-- **Number of colors** = number of members.
-- **No duplicate colors** — tick to avoid repeats.
-- Click **🎲 Randomize**, then **click a color card** to copy it (the number = member).
-- **📋 Copy all** copies `Member #1: #XXXXXX` lines.
+| Where | How to open |
+|---|---|
+| An ACO card | the **droplet** button on the card |
+| A mixer chip | click the chip's **color square** |
+| A random card | the **droplet** button in its corner |
+| A `.grd` stop | click the stop's color square |
+| Any color swatch | just click it |
 
----
+Inside the editor:
+- **Big square** — drag horizontally for saturation, vertically for value.
+- **Hue slider** underneath.
+- **HEX / R G B / H S L** fields you can type into.
+- A live **old → new** preview with a suggested color name.
+- **Revert** — back to the color you started with.
+- **Add** — creates a new color instead of replacing one (where supported).
+- An **eyedropper** button (Chromium) picks any color off the screen.
 
-## 6. Design tools — Create & Analyze
-
-Design tools are split across two tabs: **🧩 Create** and **🔍 Analyze**.
-
-### 🧩 Create tab
-| Tool | What it does |
-|------|--------------|
-| 🧩 **Palette Generator** | Creates a harmony palette (complementary, analogous, triadic, split, tetradic) from a base color. |
-| 🌈 **Gradient Generator** | Builds a linear / radial / **conic** CSS gradient and copies the CSS. |
-| 🖼 **Image → Palette / Eyedropper** | Click an image to pick one color, extract dominant colors, and export them straight to `.aco`. |
-| 📦 **Presets & Templates** | One-click built-in palettes (Material, Tailwind, Brand Colors, Pastel, Earth Tones). |
-
-### 🔍 Analyze tab
-| Tool | What it does |
-|------|--------------|
-| 🔳 **Contrast Checker** | Shows the WCAG contrast ratio between text and background with AA/AAA badges. |
-| 👁 **Color Blindness Preview** | Shows the palette as seen with protanopia / deuteranopia / tritanopia / grayscale. |
-| ♿ **Accessibility Audit** | Percentage of the palette passing AA against white/black text. |
-| 📊 **Palette Statistics** | Average saturation/lightness and a hue-distribution chart. |
-
-Additionally, clicking **ℹ️** on any color card opens a **detail panel** with HEX / RGB / HSL / HSV / CMYK / Lab, luminance and contrast (click any row to copy).
+Every change is recorded in **Undo**.
 
 ---
 
-## 7. Batch processing
+## 5. Bulk adjust & shortcuts
 
-In the **📦 Batch** tab:
+- Select colors, then hit **Adjust** in the toolbar.
+- Drag **Rotate hue / Saturation / Lightness** — the palette updates live as a preview.
+- **Reset** returns the sliders to 0 · **Cancel** rolls everything back · **Apply** keeps the result (and records it in Undo).
 
-- Click **Open files** and pick **several `.aco` files** at once (or drag & drop).
-- The list shows each file with its color count; remove individual files with ✕.
-- **Merge into Viewer** combines them into the Viewer tab (optionally removing duplicates with the "dedupe" checkbox).
-- **Export merged .aco** downloads a single `merged-palette.aco`.
-
----
-
-## 8. Gradient (.grd) tab
-
-In the **📐 Gradient** tab you can open, edit and export Photoshop gradient files (`.grd`, v3 & v5).
-
-### Open a file
-- Click **📁 Open .grd file** (or drag & drop a `.grd` onto the tab) to load its gradients.
-- Each gradient appears in the list with a **live preview** and a Solid/Noise badge; click one to edit it.
-
-### Edit a solid gradient
-- **Rename** it in the top field; **🗑** deletes the gradient.
-- **➕ Add gradient** creates a new black→white gradient.
-- **Color stops:** click a swatch to change its color, drag **Location** (0–100%) and **Midpoint** to shape the transition, **✕** removes a stop, **➕ Add color stop** inserts one in the middle.
-- **Transparency stops:** same idea — Opacity and Location per stop.
-- **Smoothness** controls the overall interpolation.
-
-### Edit a noise gradient
-- **Seed / 🎲 Regenerate**, **Roughness**, **Color space**, **Add transparency**, **Restrict colors**, and the **minimum / maximum** value per channel.
-- Noise gradients are recreated **approximately** (Photoshop uses its own internal algorithm).
-
-### Export
-- **📋 Copy CSS** → a `linear-gradient(…)` string.
-- **📐 Export SVG** → a standalone vector gradient.
-- **🎨 Extract colors → .aco** → saves the color stops as a palette.
-- **📁 Load into Viewer** → sends the colors to the View ACO tab.
-- **💾 Save .grd** → writes all gradients back to a `.grd` file.
-
-> **Note:** foreground/background stops are resolved to concrete colors when opened, and saved stops are always written as user stops with RGB colors.
+| Key | Action |
+|---|---|
+| `Ctrl/Cmd + Z` | Undo |
+| `Ctrl/Cmd + Shift + Z` or `Ctrl + Y` | Redo |
+| `Ctrl/Cmd + A` | Select all colors |
+| `Delete` / `Backspace` | Delete the selected colors |
+| `Esc` | Close whatever is open |
 
 ---
 
-## 9. Settings
+## 6. Tab 2 — .grd gradients
 
-The **⚙️ Settings** tab lets you personalize the app. Every choice is saved on your device.
-
-| Setting | What it does |
-|---------|--------------|
-| **Appearance** | **Light**, **Dark** or **Auto** (follows your system). The top-right 🌙/☀️ button still toggles light/dark instantly. |
-| **Accent color** | Pick a highlight color — it recolors the logo text, active tab, buttons and glow effects. |
-| **Language** | Choose from 6 languages: Vietnamese, English, 中文 (简体), 한국어, 日本語, Español. |
-| **Font size** | Small / Medium / Large. |
-| **Sound effects** | Play subtle sounds for clicks, copies and notifications (on/off). |
-| **Motion effects** | Turn animations on or off. |
-| **Clear saved data** | Remove mix history, language, theme and all stored preferences, then reload. |
-| **About** | A short description of the app. |
+- Drag and drop or click to open a `.grd` file (**v3 & v5**), both **solid** and **noise** forms.
+- The gradient list is on the left — click one to edit it.
+- For **solid** gradients: edit color stops (position, midpoint, color), transparency stops and smoothness.
+- For **noise** gradients: edit seed, roughness, color limits and display options.
+- **Add gradient** · **Delete gradient** · **Save .grd** writes a new file.
+- You can also copy the CSS `linear-gradient`, export SVG, extract the colors to `.aco`, or send them to the ACO tab.
 
 ---
 
-## 10. Export image & data
+## 7. Tab 3 — Mix colors
 
-In the **View ACO** tab, select the colors you want, then click **⬇ Export image & data**. A dialog lets you choose:
-
-- **Layout:** horizontal strip / vertical strip / grid (with column count).
-- **Cell size** and **spacing**.
-- **Label:** HEX / HEX + Name / none.
-- **Background:** white or transparent.
-- **Live preview** before downloading.
-
-Export formats:
-
-| Format | Description |
-|--------|-------------|
-| 🖼 PNG | High-resolution palette image |
-| 📐 SVG | Vector, editable |
-| 🎨 CSS | `--color-1: #…;` variables |
-| { } JSON | Structured color data |
-| 📄 TXT | HEX list, one per line |
-
-You can also export the selected colors back to a **`.aco` file** with the **💾 Export .aco** button.
+- **Add colors** with the picker, or **Open ACO file** to pick from a whole palette.
+- Dropping an `.aco` file onto the panel works too.
+- **Equalize** splits the ratios evenly; drag a chip's slider to tune it individually.
+- Click a chip's **color square** to retint it mid-mix.
+- The result shows HEX / RGB / HSL — **click a row to copy it**.
+- **Save to history** keeps the result; click a history entry to copy it again.
+- **Load into ACO** sends the mix result to the ACO tab for further editing.
 
 ---
 
-## 11. Mix history
+## 8. Tab 4 — Random colors
 
-- Found at the bottom of the **Mix colors** tab.
-- Whenever you **copy** or **save** a mixed color, it's added to history automatically.
-- **Click a history swatch** to copy it again.
-- **✕** removes one color; **🗑 Clear history** removes all.
-- History is **saved in your browser** (persists when you reopen the page).
+- Choose **Fully random** or **By color family** (8 families: red, orange, yellow, green, cyan, blue, purple, pink).
+- Enter the **number of colors** (one per member) and tick **No duplicates** if needed.
+- Hit **Random** to generate.
+- Click a card to copy · the **droplet** button to hand-tune each one · **Load into ACO** to move them to the ACO tab.
 
 ---
 
-## 12. Install as an app (PWA)
-
-You can install the app on desktop and mobile:
+## 9. Install as an app (PWA)
 
 | Platform | How |
-|----------|-----|
-| **Desktop** (Chrome/Edge) | Open the URL → **📲** button or the address-bar install icon → **Install** |
-| **Android** (Chrome) | Open the URL → **⋮** menu → **Add to Home Screen** |
+|---|---|
+| **Windows / macOS / Linux** (Chrome, Edge) | Open the URL → the **install** icon in the address bar |
+| **Android** (Chrome) | Menu ⋮ → **Install app** |
 | **iPhone/iPad** (Safari) | Open the URL → **Share** → **Add to Home Screen** |
 
-Once installed: it has its own icon, opens in a **standalone window** (no address bar), and works **offline**.
-
-> **Requirement:** the app must be served over **HTTPS** (GitHub Pages / Netlify / Vercel). It cannot be installed from a local `file://`.
+The app gets its own icon, opens in a standalone window and works **offline**.
 
 ---
 
-## 13. FAQ
+## 10. FAQ
 
-**Q:** I opened a file but see no colors?
-**A:** Check it's a valid `.aco` file. Some software exports ACO with a different structure.
+**Is my data uploaded anywhere?**
+No. Everything is read and processed inside your browser.
 
-**Q:** Is my data uploaded anywhere?
-**A:** No. The app runs entirely in your browser — nothing is sent over the network.
+**Which files can I open?**
+`.aco` (v1 & v2) and `.grd` (v3 & v5).
 
-**Q:** How does mixing work?
-**A:** Colors are blended by ratio (weighted average) — like mixing paint. Drag a slider to make a color "heavier".
+**Can I edit colors and save them back to the original file format?**
+Yes — after editing hit **Save .aco** and you'll download a new `.aco` file.
 
-**Q:** How do I mix only part of an ACO file?
-**A:** Click **📁 Open ACO file**, untick the colors you don't want, then click **Add colors to mix**.
+**How many undo steps?**
+60 per opened file.
+
+**Why don't I see the eyedropper button?**
+It only appears on Chromium browsers (Chrome, Edge). Color editing works normally everywhere else.
+
+**Which language does the app use?**
+English only. These guides are bilingual, but the app interface is English.

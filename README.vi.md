@@ -1,4 +1,4 @@
-# 🎨 Chaereve ColorLab
+# 🎨 Color Studio
 
 <p align="center">
   <a href="https://github.com/chaereve/chaereve-colorlab/releases"><img alt="Tải xuống" src="https://img.shields.io/badge/T%E1%BA%A3i%20xu%E1%BB%91ng-2ea043?style=for-the-badge"></a>
@@ -7,89 +7,69 @@
 <p align="center">
   <a href="README.md"><img alt="English" src="https://img.shields.io/badge/English-1a3fd6?style=for-the-badge"></a>&nbsp;
   <a href="README.vi.md"><img alt="Tiếng Việt" src="https://img.shields.io/badge/Ti%E1%BA%BFng%20Vi%E1%BB%87t-22d3ee?style=for-the-badge"></a>&nbsp;
-  <a href="README.zh.md"><img alt="中文" src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.ko.md"><img alt="한국어" src="https://img.shields.io/badge/%ED%95%9C%EA%B5%AD%EC%96%B4-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.ja.md"><img alt="日本語" src="https://img.shields.io/badge/%E6%97%A5%E6%9C%AC%E8%AA%9E-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.es.md"><img alt="Español" src="https://img.shields.io/badge/Espa%C3%B1ol-1a3fd6?style=for-the-badge"></a>
 </p>
 
 Công cụ **xem, trộn và xuất bảng màu Photoshop (`.aco`)** — chạy **ngay trên trình duyệt**. Không cần cài đặt, không cần đăng ký, không tải dữ liệu lên mạng.
 
 > Mọi dữ liệu được xử lý **hoàn toàn cục bộ** trên máy/điện thoại của bạn.
 
-**🌐 Giao diện đa ngôn ngữ (6 ngôn ngữ):** Tiếng Việt, English, 中文 (简体), 한국어, 日本語, Español — đổi trong **⚙️ Cài đặt**.
+**🇬🇧 Giao diện chỉ tiếng Anh.** Ứng dụng chỉ dùng tiếng Anh; tài liệu này vẫn song ngữ.
+
+> Bộ icon [**Majesticons**](https://majesticons.com/) (MIT) — logo là hình giọt nước, dùng cả trên web và làm icon tab trình duyệt.
 
 ---
 
 ## ✨ Tính năng
 
-### 📁 Xem ACO
-- Kéo thả (hoặc click) file `.aco` để mở.
-- Hỗ trợ **ACO v1 & v2**, đọc được **tên màu** và các hệ màu RGB / HSB / CMYK / Lab / Grayscale.
-- Mỗi màu hiển thị **số thứ tự**, tên màu, HEX, RGB và hệ màu gốc.
-- **Tìm kiếm** theo tên/HEX/RGB và **sắp xếp** theo sắc độ, độ sáng, bão hòa, tên.
-- **Tìm kiếm nâng cao** — lọc theo dải `hue:0-60`, `sat:>50`, `light:40-80`, hoặc tìm màu gần với `similar:#FF0000`.
+### 📁 1. Xem & chỉnh màu ACO
+- Kéo thả (hoặc click) file `.aco` để mở. Hỗ trợ **ACO v1 & v2**, đọc được **tên màu** và các hệ màu RGB / HSB / CMYK / Lab / Grayscale.
+- Mỗi màu hiện số thứ tự, tên, HEX, RGB và hệ màu gốc.
+- **Tìm kiếm** theo tên/HEX/RGB · **sắp xếp** theo sắc độ / độ sáng / bão hoà / tên.
+- Bộ lọc nâng cao: `hue:0-60` · `sat:>50` · `light:40-80` · `similar:#FF0000`.
+- **Thêm / xóa / đổi tên / kéo thả đổi thứ tự** màu · **hoàn tác / làm lại** 60 bước · **lưu lại file .aco**.
+- **Chuột phải** thẻ màu để mở menu nhanh.
 
-### ✏️ Chỉnh sửa palette (trực tiếp)
-- **Đổi tên** màu (✏️), **xóa** (🗑), hoặc **thêm** màu mới — rồi **lưu lại file .aco**.
-- **Hoàn tác / làm lại** đầy đủ (tối đa 60 bước).
-- **Chuột phải** thẻ màu để mở menu nhanh (copy / chi tiết / đổi tên / xuất / xóa).
+### 🎛 2. Trình chỉnh màu — một trình cho mọi chỗ
+- Nút **giọt màu** trên mỗi thẻ ACO, trên mỗi thẻ random, và trên ô màu của mỗi chip đang trộn.
+- Mọi ô chọn màu khác (điểm dừng `.grd`, màu gốc…) cũng mở chính trình này.
+- Ô **SV + thanh sắc độ**, xem trước **cũ → mới**, gõ được **HEX / RGB / HSL**.
+- **Về màu cũ** lùi về đúng màu ban đầu · **Thêm** tạo màu mới thay vì thay thế.
+- Nút **ống hút màu** (Chromium) lấy màu bất kỳ trên màn hình.
+- Mọi thay đổi đều ghi vào lịch sử **hoàn tác**.
 
-### 📋 Sao chép
-- Click thẻ màu để copy mã (**HEX / RGB / HSL** — tùy chọn).
-- **Copy tất cả** dưới dạng: danh sách HEX, CSS variables, SCSS, JSON, RGB, **Tailwind config**, **Styled Components**.
+### ⚡ 3. Điều chỉnh hàng loạt & phím tắt
+- Chọn các màu rồi bấm **Điều chỉnh** để **xoay sắc độ / bão hoà / độ sáng**, xem trước trực tiếp; **Đặt lại** để phục hồi, **Hủy** để quay lại.
+- **Ctrl/Cmd + Z** hoàn tác · **Ctrl/Cmd + Shift + Z** (hoặc **Ctrl + Y**) làm lại
+- **Ctrl/Cmd + A** chọn tất cả · **Delete / Backspace** xóa các màu đang chọn
+- Menu **Trùng lặp**: đánh dấu · xóa mã trùng hoàn toàn · xóa màu gần giống nhau.
 
-### 🎨 Trộn màu (dùng độc lập — không cần mở ACO)
-- Thêm màu bằng **ô chọn màu** hoặc **mở file ACO** ngay trong tab này.
-- Lưới chọn lọc giúp **loại bỏ màu không muốn trộn** bằng một click.
-- **Chỉnh lại lựa chọn** mà không cần tải lại file.
-- Tỷ lệ **tự động chia đều** theo số lượng màu; kéo thanh trượt để chỉnh riêng.
-- **Lịch sử trộn** tự lưu, click để copy lại.
+### 🌈 4. Gradient .grd
+- Mở file gradient Photoshop (`.grd` **v3 & v5**) — dạng solid và noise.
+- Chỉnh điểm màu, điểm trong suốt, điểm giữa, độ mượt, tham số noise; thêm / xóa gradient và điểm dừng.
+- **Lưu lại file `.grd`** · copy CSS · xuất SVG · trích màu ra `.aco` · nạp vào tab ACO.
 
-### 🎲 Random màu (cho từng thành viên)
-- Sinh 1–100 màu ngẫu nhiên cho từng "thành viên", hoàn toàn ngẫu nhiên hoặc theo họ màu (đỏ / cam / vàng / xanh lá / cyan / xanh dương / tím / hồng), có chế độ không trùng màu.
+### 🎨 5. Trộn màu
+- Thêm màu bằng ô chọn màu hoặc **mở file ACO** ngay trong tab; lưới chọn lọc để bỏ màu không muốn trộn.
+- Tỷ lệ tự chia đều, kéo thanh trượt để chỉnh riêng từng màu; **cân bằng tỷ lệ** bằng một click.
+- Bấm vào dòng **HEX / RGB / HSL** của kết quả để copy · **lưu vào lịch sử** · **nạp vào tab ACO**.
+- Click ô màu của chip để đổi màu ngay trong lúc đang trộn.
 
-### 🛠 Công cụ thiết kế
-Tách thành 2 tab — **🧩 Tạo màu** và **🔍 Phân tích**:
-- **Palette Generator** — complementary / analogous / triadic / split / tetradic.
-- **Gradient Generator** — gradient CSS tuyến tính / hướng tâm / **conic**, copy mã CSS.
-- **Image → Palette / Chấm màu** — chấm vào ảnh lấy màu, trích màu chủ đạo, và **xuất thẳng ra .aco**.
-- **Presets & Templates** — thư viện cài sẵn: Material Design, Tailwind, Brand Colors, Pastel, Earth Tones.
-- **Contrast Checker** — tỷ lệ tương phản WCAG kèm huy hiệu AA/AAA.
-- **Accessibility Audit** — % màu trong palette đạt AA khi ghép với chữ trắng/đen.
-- **Palette Statistics** — độ bão hòa/độ sáng trung bình và biểu đồ phân bố sắc độ.
-- **Color Blindness Preview** — protanopia / deuteranopia / tritanopia / grayscale.
-- **Bảng chi tiết màu** — HEX / RGB / HSL / HSV / CMYK / Lab, độ sáng, tương phản.
-- **Phát hiện trùng lặp** và **tìm màu tương tự**.
+### 🎲 6. Random màu
+- Sinh 1–100 màu cho từng "thành viên", ngẫu nhiên hoàn toàn hoặc theo họ màu (8 họ), có chế độ không trùng.
+- Click màu để copy · nút giọt màu để chỉnh tay từng màu · **nạp vào tab ACO**.
 
-### 📦 Xử lý nhiều file (Batch)
-- Mở **nhiều file .aco** cùng lúc, **gộp** thành một palette (có chế độ bỏ trùng) hoặc **xuất .aco gộp**.
-
-### 🔗 Chia sẻ palette
-- Tạo **link chia sẻ** (`?palette=...`) mã hóa palette hiện tại — ai mở link cũng thấy cùng màu, không cần server.
-
-### 📐 Gradient (.grd)
-- Mở file **gradient Photoshop** (`.grd`, **v3 & v5**) — dạng solid và noise.
-- **Xem trước** từng gradient, rồi **chỉnh sửa** điểm màu, điểm trong suốt, điểm giữa, độ mượt, và các tham số noise (seed, roughness, min/max).
-- **Thêm / xóa gradient** và điểm dừng, rồi **lưu lại file `.grd`**.
-- Xuất gradient ra **CSS `linear-gradient`** hoặc **SVG**, và **trích màu ra `.aco`** hoặc nạp thẳng vào Viewer.
-
-### ⬇ Xuất
-- **PNG / SVG / CSS / JSON / TXT** với tùy chọn bố cục, kích thước, nhãn, nền (kể cả trong suốt).
-- **Xuất .aco** (v2, có tên màu) từ các màu đã chọn.
-
-### 🌙 Giao diện — glassmorphism
-- Thiết kế **Glassmorphism**: bề mặt kính mờ, hiệu ứng blur và ánh sáng dịu — trau chuốt như macOS/iOS.
-- Chủ đề **tối / sáng / tự động** (mặc định theo hệ thống).
-- **6 ngôn ngữ**: Tiếng Việt, English, 中文 (简体), 한국어, 日本語, Español — đổi trong **⚙️ Cài đặt**.
-- Animation mượt, giao diện ưu tiên mobile (nav dưới cùng, bottom-sheet, nút to vừa tay).
+### 🌙 Giao diện — Liquid Glass (chỉ nền tối)
+- **Liquid Glass**: blur nền thật kèm tăng bão hoà, viền khúc xạ và gờ sáng ở mép trên các bề mặt kính.
+- **Chỉ chạy nền tối** — giao diện gần như không màu để màu của bạn là thứ duy nhất lên màu.
+- **4 tab: Màu · Gradient · Trộn màu · Random**, mỗi tab chia hai cột theo đúng luồng việc.
+- **Responsive**: màn hình rộng (≥1040px) có **thanh bên** dính kèm vạch trượt đánh dấu tab; điện thoại/tablet dùng **đầu trang gọn + dock kính nổi** ở đáy.
+- Icon **SVG nét** bộ **Majesticons** (24×24) thay emoji, phân cấp chữ rõ ràng — không nảy, không phát sáng.
+- Chuyển động tiết chế: mờ/đổi màu ngắn, vạch trượt ở menu, hiệu ứng xuất hiện so le nhỏ — và tắt hoàn toàn với `prefers-reduced-motion`.
+- Ánh sáng nền sau lớp kính nhuốm theo bảng màu đang mở.
 
 ### ⚙️ Cài đặt
-- **Giao diện** — chủ đề sáng, tối hoặc tự động.
-- **Màu nhấn** — đổi màu toàn bộ giao diện (logo, tab, nút, hiệu ứng phát sáng).
-- **Ngôn ngữ** và **cỡ chữ** (nhỏ / vừa / lớn).
-- **Âm thanh** — phát âm thanh nhẹ khi click, copy và thông báo (bật/tắt).
-- Bật/tắt **hiệu ứng chuyển động**, **xóa dữ liệu đã lưu**, và mục **Giới thiệu**.
+- **Cỡ chữ** (nhỏ / vừa / lớn).
+- **Xóa dữ liệu đã lưu** và mục **Giới thiệu**.
 
 ### 📲 Cài làm app (PWA)
 - Cài được trên **máy tính (Windows/macOS/Linux)** và **điện thoại (Android/iOS)**.
@@ -108,29 +88,23 @@ Tách thành 2 tab — **🧩 Tạo màu** và **🔍 Phân tích**:
 Mở `index.html` bằng trình duyệt bất kỳ (nhấp đúp), hoặc truy cập link đã deploy.
 
 ### Quy trình nhanh
-1. Mở tab **📁 Xem ACO** → kéo thả file `.aco`.
-2. Click màu để copy, hoặc tick nhiều màu để xuất.
-3. Mở tab **🎨 Trộn màu** → thêm màu → xem kết quả trộn ngay.
-4. Bấm **⬇ Xuất ảnh & dữ liệu** để tải bảng màu.
-5. Mở tab **📐 Gradient** → kéo thả file `.grd` để xem và chỉnh sửa gradient Photoshop.
-6. Mở **⚙️ Cài đặt** để đổi chủ đề, màu nhấn, ngôn ngữ và cỡ chữ.
+1. Mở tab **Màu ACO** → kéo thả file `.aco`.
+2. Click thẻ màu để copy · nút giọt màu để chỉnh · bút chì để đổi tên.
+3. Chọn nhiều màu rồi bấm **Điều chỉnh** để đổi sắc độ / độ sáng cả lô.
+4. Bấm **Lưu .aco** để tải bảng màu đã chỉnh về máy.
+5. Mở tab **Gradient .grd** → kéo thả file `.grd` để xem và chỉnh gradient Photoshop.
+6. Mở **⚙️ Cài đặt** để đổi cỡ chữ hoặc xóa dữ liệu đã lưu.
 
 ---
 
-## 🌐 Ngôn ngữ (6)
+## 🌐 Ngôn ngữ
 
-Mở **⚙️ Cài đặt** (nút bánh răng, góc phải trên) và chọn ngôn ngữ trong mục **Ngôn ngữ**: Tiếng Việt, English, 中文 (简体), 한국어, 日本語, Español. Toàn bộ giao diện đổi ngay lập tức và lựa chọn được ghi nhớ cho những lần sau.
+**Giao diện ứng dụng chỉ dùng tiếng Anh.** Tài liệu được giữ song ngữ:
 
-**README và Hướng dẫn sử dụng của repo này có đủ 6 ngôn ngữ:**
-
-| Ngôn ngữ | README | Hướng dẫn sử dụng |
+| Tài liệu | README | Hướng dẫn sử dụng |
 |----------|--------|-------------------|
 | 🇬🇧 English | [README.md](README.md) | [USER_GUIDE.md](USER_GUIDE.md) |
 | 🇻🇳 Tiếng Việt | [README.vi.md](README.vi.md) | [USER_GUIDE.vi.md](USER_GUIDE.vi.md) |
-| 🇨🇳 中文 (简体) | [README.zh.md](README.zh.md) | [USER_GUIDE.zh.md](USER_GUIDE.zh.md) |
-| 🇰🇷 한국어 | [README.ko.md](README.ko.md) | [USER_GUIDE.ko.md](USER_GUIDE.ko.md) |
-| 🇯🇵 日本語 | [README.ja.md](README.ja.md) | [USER_GUIDE.ja.md](USER_GUIDE.ja.md) |
-| 🇪🇸 Español | [README.es.md](README.es.md) | [USER_GUIDE.es.md](USER_GUIDE.es.md) |
 
 ---
 
@@ -166,8 +140,15 @@ Mở ACO ở tab **Trộn màu** → bỏ chọn màu không muốn → bấm **
 
 ## 📚 Hướng dẫn
 
-Hướng dẫn sử dụng (đủ 6 ngôn ngữ):
-- 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md) · 🇨🇳 [USER_GUIDE.zh.md](USER_GUIDE.zh.md) · 🇰🇷 [USER_GUIDE.ko.md](USER_GUIDE.ko.md) · 🇯🇵 [USER_GUIDE.ja.md](USER_GUIDE.ja.md) · 🇪🇸 [USER_GUIDE.es.md](USER_GUIDE.es.md)
+Hướng dẫn sử dụng:
+- 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md)
+
+---
+
+## 🙏 Credits
+
+- Icon — [**Majesticons**](https://majesticons.com/) của Gerrit Halfmann ([MIT](https://github.com/halfmage/majesticons)).
+- Font, blur và các phép toán màu đều dùng API có sẵn của trình duyệt — không phụ thuộc thư viện khi chạy.
 
 ---
 

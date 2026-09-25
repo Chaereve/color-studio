@@ -1,8 +1,8 @@
 /* ============================================================
-   Chaereve ColorLab — Service Worker (PWA / Offline)
+   Color Studio — Service Worker (PWA / Offline)
    Chiến lược: cache-first cho app shell, network fallback.
 ============================================================ */
-const CACHE_NAME = 'chaereve-colorlab-v1';
+const CACHE_NAME = 'chaereve-colorlab-v4';
 const ASSETS = [
   './',
   './index.html',

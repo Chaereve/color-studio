@@ -1,4 +1,4 @@
-# 🎨 Chaereve ColorLab
+# 🎨 Color Studio
 
 <p align="center">
   <a href="https://github.com/chaereve/chaereve-colorlab/releases"><img alt="Download" src="https://img.shields.io/badge/Download-2ea043?style=for-the-badge"></a>
@@ -7,89 +7,69 @@
 <p align="center">
   <a href="README.md"><img alt="English" src="https://img.shields.io/badge/English-22d3ee?style=for-the-badge"></a>&nbsp;
   <a href="README.vi.md"><img alt="Tiếng Việt" src="https://img.shields.io/badge/Ti%E1%BA%BFng%20Vi%E1%BB%87t-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.zh.md"><img alt="中文" src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.ko.md"><img alt="한국어" src="https://img.shields.io/badge/%ED%95%9C%EA%B5%AD%EC%96%B4-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.ja.md"><img alt="日本語" src="https://img.shields.io/badge/%E6%97%A5%E6%9C%AC%E8%AA%9E-1a3fd6?style=for-the-badge"></a>&nbsp;
-  <a href="README.es.md"><img alt="Español" src="https://img.shields.io/badge/Espa%C3%B1ol-1a3fd6?style=for-the-badge"></a>
 </p>
 
 A tool to **view, mix, and export Photoshop (`.aco`) color palettes** — running entirely **in your browser**. No installation, no sign-up, no data upload.
 
 > Everything is processed **100% locally** on your device.
 
-**🌐 Multilingual UI (6 languages):** Vietnamese, English, 中文 (简体), 한국어, 日本語, Español — switch in **⚙️ Settings**.
+**🇬🇧 English-only interface.** The app speaks English; these docs stay bilingual.
+
+> Icons by [**Majesticons**](https://majesticons.com/) (MIT) — the droplet mark is the app logo, on screen and as the browser-tab icon.
 
 ---
 
 ## ✨ Features
 
-### 📁 View ACO
-- Drag & drop (or click) a `.aco` file to open it.
-- Supports **ACO v1 & v2**, reads **color names** and the RGB / HSB / CMYK / Lab / Grayscale color spaces.
-- Each color shows an **index number**, name, HEX, RGB and its original color space.
-- **Search** by name/HEX/RGB and **sort** by hue, lightness, saturation, or name.
-- **Advanced search** — filter by ranges with `hue:0-60`, `sat:>50`, `light:40-80`, or find near-colors with `similar:#FF0000`.
+### 📁 1. View & edit ACO colors
+- Drag-and-drop (or click) to open an `.aco` file. Supports **ACO v1 & v2**, reading **color names** and RGB / HSB / CMYK / Lab / Grayscale spaces.
+- Every color shows its index, name, HEX, RGB and original color space.
+- **Search** by name/HEX/RGB · **sort** by hue / lightness / saturation / name.
+- Advanced filters: `hue:0-60` · `sat:>50` · `light:40-80` · `similar:#FF0000`.
+- **Add / delete / rename / drag-to-reorder** · full **undo / redo** (60 steps) · **save back to .aco**.
+- **Right-click** a swatch for the quick menu.
 
-### ✏️ Edit palette (in-place)
-- **Rename** colors inline (✏️), **delete** (🗑), or **add** new colors — then **save back to .aco**.
-- Full **undo / redo** (up to 60 steps).
-- **Right-click** any swatch for a quick menu (copy / details / rename / export / delete).
+### 🎛 2. One color editor, everywhere
+- A **droplet button** on every ACO swatch, every random card, and every mixer chip's color square.
+- Every other color swatch (.grd stops, base colors…) opens that same editor.
+- **SV square + hue slider**, live **old → new** preview, typeable **HEX / RGB / HSL**.
+- **Revert** jumps back to the original color · **Add** creates a new swatch instead of replacing one.
+- An **eyedropper** button (Chromium) picks any color off the screen.
+- Every change goes through **undo**.
 
-### 📋 Copy
-- Click a swatch to copy its code (**HEX / RGB / HSL** — selectable).
-- **Copy all** as: HEX list, CSS variables, SCSS, JSON, RGB, **Tailwind config**, or **Styled Components**.
+### ⚡ 3. Bulk adjust & shortcuts
+- Select colors, hit **Adjust** to **rotate hue / saturation / lightness** with a live preview; **Reset** restores, **Cancel** rolls back.
+- **Ctrl/Cmd + Z** undo · **Ctrl/Cmd + Shift + Z** (or **Ctrl + Y**) redo
+- **Ctrl/Cmd + A** select all · **Delete / Backspace** delete the selected colors
+- **Duplicates** menu: mark · remove identical codes · remove near-identical colors.
 
-### 🎨 Mix colors (standalone — no ACO required)
-- Add colors with the **color picker** or **open an ACO file** right in this tab.
-- A selection grid lets you **exclude colors you don't want to mix** with one click.
-- **Re-adjust your selection** without re-uploading the file.
-- Ratios **auto-equalize** by color count; drag a slider to tweak each one.
-- **Mix history** is saved automatically; click to copy again.
+### 🌈 4. .grd gradients
+- Open Photoshop gradient files (`.grd` **v3 & v5**) — solid and noise forms.
+- Edit color stops, transparency stops, midpoints, smoothness, noise parameters; add / remove gradients and stops.
+- **Save back to `.grd`** · copy CSS · export SVG · extract colors to `.aco` · send to the ACO tab.
 
-### 🎲 Random colors (per member)
-- Generate 1–100 random colors for each "member", either fully random or within a chosen color family (red / orange / yellow / green / cyan / blue / purple / pink), with optional no-duplicate mode.
+### 🎨 5. Mix colors
+- Add colors with the color picker or **open an ACO file** right in the tab; a selection grid lets you exclude colors.
+- Ratios auto-equalize; drag a slider to tweak each one; **equalize** everything in one click.
+- Click the result's **HEX / RGB / HSL** row to copy · **save to history** · **send to the ACO tab**.
+- Click a chip's color square to retint it mid-mix.
 
-### 🛠 Design tools
-Split into two tabs — **🧩 Create** and **🔍 Analyze**:
-- **Palette Generator** — complementary / analogous / triadic / split / tetradic.
-- **Gradient Generator** — linear / radial / **conic** CSS gradient with copy-to-clipboard.
-- **Image → Palette / Eyedropper** — click an image to pick a color, extract dominant colors, and **export them straight to .aco**.
-- **Presets & Templates** — built-in Material Design, Tailwind, Brand Colors, Pastel and Earth Tones palettes.
-- **Contrast Checker** — WCAG ratio with AA/AAA badges.
-- **Accessibility Audit** — % of the palette passing AA against white/black text.
-- **Palette Statistics** — average saturation/lightness and a hue-distribution chart.
-- **Color Blindness Preview** — protanopia / deuteranopia / tritanopia / grayscale.
-- **Color detail panel** — HEX / RGB / HSL / HSV / CMYK / Lab, luminance, contrast.
-- **Duplicate detector** and **similar-color finder**.
+### 🎲 6. Random colors
+- Generate 1–100 colors, one per "member", fully random or within a color family (8 families), with an optional no-duplicate mode.
+- Click to copy · droplet button to hand-tune each one · **send to the ACO tab**.
 
-### 📦 Batch processing
-- Open **multiple .aco files** at once, then **merge** them into one palette (with optional dedup) or **export a merged .aco**.
-
-### 🔗 Share palette
-- Generate a **shareable link** (`?palette=...`) that encodes the current palette — anyone opening the link sees the same colors, no server needed.
-
-### 📐 Gradient (.grd)
-- Open Photoshop **gradient files** (`.grd`, **v3 & v5**) — solid and noise gradients.
-- **Preview** each gradient, then **edit** color stops, transparency stops, midpoint, smoothness, and noise parameters (seed, roughness, min/max).
-- **Add / remove gradients** and stops, then **save back to `.grd`**.
-- Export a gradient as **CSS `linear-gradient`** or **SVG**, and **extract its colors to `.aco`** or straight into the Viewer.
-
-### ⬇ Export
-- **PNG / SVG / CSS / JSON / TXT** with layout, size, label and background options (including transparent).
-- **ACO export** (v2, with color names) of your selected colors.
-
-### 🌙 UI — glassmorphism
-- **Glassmorphism** design: frosted-glass panels, soft blur and ambient light — polished like macOS/iOS.
-- **Dark / light / auto** theme (follows your system by default).
-- **6 languages**: Vietnamese, English, 中文 (简体), 한국어, 日本語, Español — switchable in **⚙️ Settings**.
-- Smooth animations and a mobile-first layout (bottom nav, bottom sheets, large touch targets).
+### 🌙 UI — Liquid Glass (dark only)
+- **Liquid Glass**: real backdrop blur with saturation, refractive rims and a top highlight on glass surfaces.
+- **Dark only** — an almost achromatic UI so your colors are the only colorful thing.
+- **4 tabs: Colors · Gradients · Mix · Random**, each split into a logical two-column layout.
+- **Responsive**: a sticky **sidebar rail** on wide screens (≥1040px) with a sliding indicator; a compact **header + floating glass dock** on phones and tablets.
+- **Majesticons** stroke SVG icons (24×24) everywhere instead of emoji — clear type hierarchy, no bounce, no glow.
+- Motion is quiet by design: short opacity/colour fades, a sliding nav indicator, small staggered entrances — and fully off under `prefers-reduced-motion`.
+- The ambient light behind the glass is tinted by the palette you have open.
 
 ### ⚙️ Settings
-- **Appearance** — light, dark or auto theme.
-- **Accent color** — recolor the whole UI (logo, tabs, buttons, glow).
-- **Language** and **font size** (small / medium / large).
-- **Sound effects** — subtle sounds for clicks, copies and notifications (on/off).
-- **Motion effects** on/off, **clear saved data**, and an **About** box.
+- **Font size** (small / medium / large).
+- **Clear saved data** and an **About** box.
 
 ### 📲 Install as an app (PWA)
 - Installable on **desktop (Windows/macOS/Linux)** and **mobile (Android/iOS)**.
@@ -108,29 +88,23 @@ Split into two tabs — **🧩 Create** and **🔍 Analyze**:
 Just open `index.html` in any browser (double-click it), or visit the deployed URL.
 
 ### Quick flow
-1. Open the **📁 View ACO** tab → drag & drop a `.aco` file.
-2. Click a color to copy it, or tick several colors to export them.
-3. Open the **🎨 Mix colors** tab → add colors → see the mix result instantly.
-4. Click **⬇ Export image & data** to download the palette.
-5. Open the **📐 Gradient** tab → drop a `.grd` file to view and edit Photoshop gradients.
-6. Open the **⚙️ Settings** tab to switch theme, accent color, language and font size.
+1. Open the **ACO colors** tab → drag & drop a `.aco` file.
+2. Click a card to copy · the droplet to edit · the pencil to rename.
+3. Select several colors, then hit **Adjust** to shift hue / lightness in bulk.
+4. Hit **Save .aco** to download the edited palette.
+5. Open the **Gradients** tab → drop a `.grd` file to view and edit Photoshop gradients.
+6. Open **⚙️ Settings** to change the font size or clear saved data.
 
 ---
 
-## 🌐 Languages (6)
+## 🌐 Language
 
-Open **⚙️ Settings** (the gear button, top-right) and pick a language from the **Language** menu: Vietnamese, English, 中文 (简体), 한국어, 日本語, Español. The whole interface switches instantly and your choice is remembered across sessions.
+The **interface is English only**. The documentation is kept in two languages:
 
-This repository's **README and User Guide are available in all 6 languages**:
-
-| Language | README | User Guide |
-|----------|--------|------------|
+| Docs | README | User Guide |
+|------|--------|------------|
 | 🇬🇧 English | [README.md](README.md) | [USER_GUIDE.md](USER_GUIDE.md) |
 | 🇻🇳 Tiếng Việt | [README.vi.md](README.vi.md) | [USER_GUIDE.vi.md](USER_GUIDE.vi.md) |
-| 🇨🇳 中文 (简体) | [README.zh.md](README.zh.md) | [USER_GUIDE.zh.md](USER_GUIDE.zh.md) |
-| 🇰🇷 한국어 | [README.ko.md](README.ko.md) | [USER_GUIDE.ko.md](USER_GUIDE.ko.md) |
-| 🇯🇵 日本語 | [README.ja.md](README.ja.md) | [USER_GUIDE.ja.md](USER_GUIDE.ja.md) |
-| 🇪🇸 Español | [README.es.md](README.es.md) | [USER_GUIDE.es.md](USER_GUIDE.es.md) |
 
 ---
 
@@ -166,8 +140,15 @@ Open the ACO in the **Mix colors** tab → click to deselect the colors you don'
 
 ## 📚 Guides
 
-User guide (all 6 languages):
-- 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md) · 🇨🇳 [USER_GUIDE.zh.md](USER_GUIDE.zh.md) · 🇰🇷 [USER_GUIDE.ko.md](USER_GUIDE.ko.md) · 🇯🇵 [USER_GUIDE.ja.md](USER_GUIDE.ja.md) · 🇪🇸 [USER_GUIDE.es.md](USER_GUIDE.es.md)
+User guide:
+- 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md)
+
+---
+
+## 🙏 Credits
+
+- Icons — [**Majesticons**](https://majesticons.com/) by Gerrit Halfmann ([MIT](https://github.com/halfmage/majesticons)).
+- Fonts, blur and colour math — all native browser APIs; no dependencies at runtime.
 
 ---
 
