@@ -8,7 +8,7 @@ Công cụ xem và chỉnh bảng màu Photoshop (`.aco`) cùng gradient (`.grd`
 ## Mục lục
 
 1. [Bắt đầu](#1-bắt-đầu)
-2. [Ngôn ngữ & cỡ chữ](#2-ngôn-ngữ--cỡ-chữ)
+2. [Cỡ chữ & cài đặt](#2-c%E1%BB%A1-ch%E1%BB%AF--c%C3%A0i-%C4%91%E1%BA%B7t)
 3. [Tab 1 — Màu ACO](#3-tab-1--màu-aco)
 4. [Trình chỉnh màu](#4-trình-chỉnh-màu)
 5. [Điều chỉnh hàng loạt & phím tắt](#5-điều-chỉnh-hàng-loạt--phím-tắt)
@@ -28,13 +28,14 @@ Công cụ xem và chỉnh bảng màu Photoshop (`.aco`) cùng gradient (`.grd`
   - **Gradient .grd** — mở và chỉnh file gradient Photoshop.
   - **Trộn màu** — trộn nhiều màu theo tỷ lệ.
   - **Random** — sinh màu ngẫu nhiên cho từng thành viên.
-- Nút **⚙️** (góc phải trên) mở cài đặt. Nút **VI / EN** đổi ngôn ngữ ngay lập tức.
+- Nút **⚙️** mở **Cài đặt** — ở thanh bên trên máy tính, ở đầu trang trên điện thoại.
 
 ---
 
-## 2. Ngôn ngữ & cỡ chữ
+## 2. Cỡ chữ & cài đặt
 
-- **VI / EN** ở thanh trên cùng, hoặc **⚙️ Cài đặt → Ngôn ngữ**: Tiếng Việt · English.
+Giao diện **chỉ dùng tiếng Anh**.
+
 - **⚙️ Cài đặt → Cỡ chữ**: Nhỏ / Vừa / Lớn.
 - Lựa chọn được ghi nhớ cho những lần mở sau. **Xóa dữ liệu đã lưu** sẽ xóa lịch sử trộn và các tuỳ chọn này.
 
@@ -190,5 +191,5 @@ Có — chỉnh xong bấm **Lưu .aco**, bạn sẽ tải được file `.aco` 
 **Tại sao không thấy nút ống hút màu?**
 Nút này chỉ hiện trên trình duyệt Chromium (Chrome, Edge). Các trình duyệt khác vẫn chỉnh màu bình thường.
 
-**Đổi ngôn ngữ ở đâu?**
-Nút **VI / EN** ở thanh trên cùng, hoặc **⚙️ Cài đặt → Ngôn ngữ**.
+**Ứng dụng dùng ngôn ngữ gì?**
+Chỉ tiếng Anh. Các tài liệu có bản Việt, nhưng giao diện app là tiếng Anh.

@@ -8,7 +8,7 @@ A browser tool for viewing and editing Photoshop color swatches (`.aco`) and gra
 ## Contents
 
 1. [Getting started](#1-getting-started)
-2. [Language & font size](#2-language--font-size)
+2. [Font size & settings](#2-font-size--settings)
 3. [Tab 1 — ACO colors](#3-tab-1--aco-colors)
 4. [The color editor](#4-the-color-editor)
 5. [Bulk adjust & shortcuts](#5-bulk-adjust--shortcuts)
@@ -28,13 +28,14 @@ A browser tool for viewing and editing Photoshop color swatches (`.aco`) and gra
   - **Gradients** — open and edit Photoshop `.grd` gradients.
   - **Mix** — blend several colors by ratio.
   - **Random** — generate random colors, one per member.
-- The **⚙️** button (top right) opens settings. **VI / EN** switches language instantly.
+- The **⚙️** button opens **Settings** — in the sidebar on desktop, in the header on mobile.
 
 ---
 
-## 2. Language & font size
+## 2. Font size & settings
 
-- **VI / EN** in the top bar, or **⚙️ Settings → Language**: Tiếng Việt · English.
+The interface is **English only**.
+
 - **⚙️ Settings → Font size**: Small / Medium / Large.
 - Choices are remembered. **Clear saved data** wipes the mix history and these options.
 
@@ -190,5 +191,5 @@ Yes — after editing hit **Save .aco** and you'll download a new `.aco` file.
 **Why don't I see the eyedropper button?**
 It only appears on Chromium browsers (Chrome, Edge). Color editing works normally everywhere else.
 
-**Where do I change the language?**
-The **VI / EN** button in the top bar, or **⚙️ Settings → Language**.
+**Which language does the app use?**
+English only. These guides are bilingual, but the app interface is English.

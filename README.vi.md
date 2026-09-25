@@ -13,7 +13,9 @@ Công cụ **xem, trộn và xuất bảng màu Photoshop (`.aco`)** — chạy 
 
 > Mọi dữ liệu được xử lý **hoàn toàn cục bộ** trên máy/điện thoại của bạn.
 
-**🌐 Song ngữ:** Tiếng Việt · English — đổi ngay ở thanh trên cùng hoặc trong **⚙️ Cài đặt**.
+**🇬🇧 Giao diện chỉ tiếng Anh.** Ứng dụng chỉ dùng tiếng Anh; tài liệu này vẫn song ngữ.
+
+> Bộ icon [**Majesticons**](https://majesticons.com/) (MIT) — logo là hình giọt nước, dùng cả trên web và làm icon tab trình duyệt.
 
 ---
 
@@ -59,12 +61,13 @@ Công cụ **xem, trộn và xuất bảng màu Photoshop (`.aco`)** — chạy 
 ### 🌙 Giao diện — Liquid Glass (chỉ nền tối)
 - **Liquid Glass**: blur nền thật kèm tăng bão hoà, viền khúc xạ và gờ sáng ở mép trên các bề mặt kính.
 - **Chỉ chạy nền tối** — giao diện gần như không màu để màu của bạn là thứ duy nhất lên màu.
-- **4 tab: Màu ACO · Gradient .grd · Trộn màu · Random.**
-- Icon **SVG nét** thay emoji, phân cấp chữ rõ ràng, chuyển động chỉ ở mức màu/độ mờ — không nảy, không phát sáng.
-- Ánh sáng nền sau lớp kính nhuốm theo bảng màu đang mở · tương thích tốt trên màn hình nhỏ.
+- **4 tab: Màu · Gradient · Trộn màu · Random**, mỗi tab chia hai cột theo đúng luồng việc.
+- **Responsive**: màn hình rộng (≥1040px) có **thanh bên** dính kèm vạch trượt đánh dấu tab; điện thoại/tablet dùng **đầu trang gọn + dock kính nổi** ở đáy.
+- Icon **SVG nét** bộ **Majesticons** (24×24) thay emoji, phân cấp chữ rõ ràng — không nảy, không phát sáng.
+- Chuyển động tiết chế: mờ/đổi màu ngắn, vạch trượt ở menu, hiệu ứng xuất hiện so le nhỏ — và tắt hoàn toàn với `prefers-reduced-motion`.
+- Ánh sáng nền sau lớp kính nhuốm theo bảng màu đang mở.
 
 ### ⚙️ Cài đặt
-- **Ngôn ngữ** — Tiếng Việt / English.
 - **Cỡ chữ** (nhỏ / vừa / lớn).
 - **Xóa dữ liệu đã lưu** và mục **Giới thiệu**.
 
@@ -90,15 +93,15 @@ Mở `index.html` bằng trình duyệt bất kỳ (nhấp đúp), hoặc truy c
 3. Chọn nhiều màu rồi bấm **Điều chỉnh** để đổi sắc độ / độ sáng cả lô.
 4. Bấm **Lưu .aco** để tải bảng màu đã chỉnh về máy.
 5. Mở tab **Gradient .grd** → kéo thả file `.grd` để xem và chỉnh gradient Photoshop.
-6. Mở **⚙️ Cài đặt** (hoặc bấm **VI / EN** ở thanh trên cùng) để đổi ngôn ngữ và cỡ chữ.
+6. Mở **⚙️ Cài đặt** để đổi cỡ chữ hoặc xóa dữ liệu đã lưu.
 
 ---
 
-## 🌐 Ngôn ngữ (2)
+## 🌐 Ngôn ngữ
 
-Đổi bằng nút **VI / EN** ở thanh trên cùng, hoặc qua **⚙️ Cài đặt → Ngôn ngữ**: Tiếng Việt · English. Toàn bộ giao diện đổi ngay lập tức và lựa chọn được ghi nhớ cho những lần sau.
+**Giao diện ứng dụng chỉ dùng tiếng Anh.** Tài liệu được giữ song ngữ:
 
-| Ngôn ngữ | README | Hướng dẫn sử dụng |
+| Tài liệu | README | Hướng dẫn sử dụng |
 |----------|--------|-------------------|
 | 🇬🇧 English | [README.md](README.md) | [USER_GUIDE.md](USER_GUIDE.md) |
 | 🇻🇳 Tiếng Việt | [README.vi.md](README.vi.md) | [USER_GUIDE.vi.md](USER_GUIDE.vi.md) |
@@ -139,6 +142,13 @@ Mở ACO ở tab **Trộn màu** → bỏ chọn màu không muốn → bấm **
 
 Hướng dẫn sử dụng:
 - 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md)
+
+---
+
+## 🙏 Credits
+
+- Icon — [**Majesticons**](https://majesticons.com/) của Gerrit Halfmann ([MIT](https://github.com/halfmage/majesticons)).
+- Font, blur và các phép toán màu đều dùng API có sẵn của trình duyệt — không phụ thuộc thư viện khi chạy.
 
 ---
 

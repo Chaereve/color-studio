@@ -13,7 +13,9 @@ A tool to **view, mix, and export Photoshop (`.aco`) color palettes** — runnin
 
 > Everything is processed **100% locally** on your device.
 
-**🌐 Bilingual UI:** Tiếng Việt · English — switch instantly from the header or in **⚙️ Settings**.
+**🇬🇧 English-only interface.** The app speaks English; these docs stay bilingual.
+
+> Icons by [**Majesticons**](https://majesticons.com/) (MIT) — the droplet mark is the app logo, on screen and as the browser-tab icon.
 
 ---
 
@@ -59,12 +61,13 @@ A tool to **view, mix, and export Photoshop (`.aco`) color palettes** — runnin
 ### 🌙 UI — Liquid Glass (dark only)
 - **Liquid Glass**: real backdrop blur with saturation, refractive rims and a top highlight on glass surfaces.
 - **Dark only** — an almost achromatic UI so your colors are the only colorful thing.
-- **4 tabs: ACO colors · .grd gradients · Mix · Random.**
-- Stroke **SVG icons** instead of emoji, clear type hierarchy, motion limited to color/opacity — no bounce, no glow.
-- The ambient light behind the glass is tinted by the palette you have open · works well on small screens.
+- **4 tabs: Colors · Gradients · Mix · Random**, each split into a logical two-column layout.
+- **Responsive**: a sticky **sidebar rail** on wide screens (≥1040px) with a sliding indicator; a compact **header + floating glass dock** on phones and tablets.
+- **Majesticons** stroke SVG icons (24×24) everywhere instead of emoji — clear type hierarchy, no bounce, no glow.
+- Motion is quiet by design: short opacity/colour fades, a sliding nav indicator, small staggered entrances — and fully off under `prefers-reduced-motion`.
+- The ambient light behind the glass is tinted by the palette you have open.
 
 ### ⚙️ Settings
-- **Language** — Tiếng Việt / English.
 - **Font size** (small / medium / large).
 - **Clear saved data** and an **About** box.
 
@@ -90,16 +93,16 @@ Just open `index.html` in any browser (double-click it), or visit the deployed U
 3. Select several colors, then hit **Adjust** to shift hue / lightness in bulk.
 4. Hit **Save .aco** to download the edited palette.
 5. Open the **Gradients** tab → drop a `.grd` file to view and edit Photoshop gradients.
-6. Open **⚙️ Settings** (or use **VI / EN** in the header) to switch language and font size.
+6. Open **⚙️ Settings** to change the font size or clear saved data.
 
 ---
 
-## 🌐 Languages (2)
+## 🌐 Language
 
-Switch with the **VI / EN** control in the header, or via **⚙️ Settings → Language**: Tiếng Việt · English. The whole interface switches instantly and your choice is remembered across sessions.
+The **interface is English only**. The documentation is kept in two languages:
 
-| Language | README | User Guide |
-|----------|--------|------------|
+| Docs | README | User Guide |
+|------|--------|------------|
 | 🇬🇧 English | [README.md](README.md) | [USER_GUIDE.md](USER_GUIDE.md) |
 | 🇻🇳 Tiếng Việt | [README.vi.md](README.vi.md) | [USER_GUIDE.vi.md](USER_GUIDE.vi.md) |
 
@@ -139,6 +142,13 @@ Open the ACO in the **Mix colors** tab → click to deselect the colors you don'
 
 User guide:
 - 🇬🇧 [USER_GUIDE.md](USER_GUIDE.md) · 🇻🇳 [USER_GUIDE.vi.md](USER_GUIDE.vi.md)
+
+---
+
+## 🙏 Credits
+
+- Icons — [**Majesticons**](https://majesticons.com/) by Gerrit Halfmann ([MIT](https://github.com/halfmage/majesticons)).
+- Fonts, blur and colour math — all native browser APIs; no dependencies at runtime.
 
 ---
 

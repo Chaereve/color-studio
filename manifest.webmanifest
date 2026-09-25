@@ -1,8 +1,8 @@
 {
   "name": "Chaereve ColorLab",
   "short_name": "ColorLab",
-  "description": "Xem, trộn và xuất bảng màu & gradient Photoshop (.aco · .grd) ngay trên trình duyệt — chạy offline.",
-  "lang": "vi",
+  "description": "View, edit and mix Photoshop color palettes and gradients (.aco · .grd) in your browser — works offline.",
+  "lang": "en",
   "dir": "ltr",
   "start_url": "./",
   "scope": "./",
@@ -10,7 +10,12 @@
   "orientation": "any",
   "background_color": "#0b0d14",
   "theme_color": "#07080c",
-  "categories": ["graphics", "design", "utilities", "productivity"],
+  "categories": [
+    "graphics",
+    "design",
+    "utilities",
+    "productivity"
+  ],
   "icons": [
     {
       "src": "./icons/icon-192.png",
