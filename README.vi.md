@@ -19,93 +19,49 @@ Công cụ **xem, trộn và xuất bảng màu Photoshop (`.aco`)** — chạy 
 
 ## ✨ Tính năng
 
-### 📁 Xem ACO
-- Kéo thả (hoặc click) file `.aco` để mở.
-- Hỗ trợ **ACO v1 & v2**, đọc được **tên màu** và các hệ màu RGB / HSB / CMYK / Lab / Grayscale.
-- Mỗi màu hiển thị **số thứ tự**, tên màu, HEX, RGB và hệ màu gốc.
-- **Tìm kiếm** theo tên/HEX/RGB và **sắp xếp** theo sắc độ, độ sáng, bão hòa, tên.
-- **Tìm kiếm nâng cao** — lọc theo dải `hue:0-60`, `sat:>50`, `light:40-80`, hoặc tìm màu gần với `similar:#FF0000`.
+### 📁 1. Xem & chỉnh màu ACO
+- Kéo thả (hoặc click) file `.aco` để mở. Hỗ trợ **ACO v1 & v2**, đọc được **tên màu** và các hệ màu RGB / HSB / CMYK / Lab / Grayscale.
+- Mỗi màu hiện số thứ tự, tên, HEX, RGB và hệ màu gốc.
+- **Tìm kiếm** theo tên/HEX/RGB · **sắp xếp** theo sắc độ / độ sáng / bão hoà / tên.
+- Bộ lọc nâng cao: `hue:0-60` · `sat:>50` · `light:40-80` · `similar:#FF0000`.
+- **Thêm / xóa / đổi tên / kéo thả đổi thứ tự** màu · **hoàn tác / làm lại** 60 bước · **lưu lại file .aco**.
+- **Chuột phải** thẻ màu để mở menu nhanh.
 
-### ✏️ Chỉnh sửa palette (trực tiếp)
-- **Đổi tên** màu (✏️), **xóa** (🗑), hoặc **thêm** màu mới — rồi **lưu lại file .aco**.
-- **Hoàn tác / làm lại** đầy đủ (tối đa 60 bước).
-- **Chuột phải** thẻ màu để mở menu nhanh (copy / chi tiết / đổi tên / xuất / xóa).
+### 🎛 2. Trình chỉnh màu — một trình cho mọi chỗ
+- Nút **giọt màu** trên mỗi thẻ ACO, trên mỗi thẻ random, và trên ô màu của mỗi chip đang trộn.
+- Mọi ô chọn màu khác (điểm dừng `.grd`, màu gốc…) cũng mở chính trình này.
+- Ô **SV + thanh sắc độ**, xem trước **cũ → mới**, gõ được **HEX / RGB / HSL**.
+- **Về màu cũ** lùi về đúng màu ban đầu · **Thêm** tạo màu mới thay vì thay thế.
+- Nút **ống hút màu** (Chromium) lấy màu bất kỳ trên màn hình.
+- Mọi thay đổi đều ghi vào lịch sử **hoàn tác**.
 
-### 🎛 Chỉnh màu ở mọi mục — một trình duy nhất
-Một **trình chỉnh màu** dùng chung mở ra ở bất cứ đâu có màu, nên bạn luôn gặp cùng một
-bộ điều khiển thay vì mỗi chỗ một kiểu:
-- **Xem ACO** — nút giọt màu trên mỗi thẻ màu.
-- **Trộn màu** — click vào ô màu của chip để đổi, kết quả trộn cập nhật ngay.
-- **Random** — nút giọt màu trên từng thẻ màu sinh ra.
-- **Bảng hài hòa, Gradient, Tương phản, Lấy màu từ ảnh, các điểm dừng .grd** — click vào
-  ô chọn màu (hoặc mã HEX dưới một điểm dừng gradient) để mở trình chỉnh.
-- Trong trình: **ô SV + thanh sắc độ**, xem trước **cũ → mới** trực tiếp, và các ô
-  **HEX / RGB / HSL** gõ được. **Hoàn tác** về đúng màu ban đầu; **Thêm** tạo màu mới
-  thay vì thay thế (ở những nơi có hỗ trợ).
-- Trên trình duyệt Chromium có thêm nút **ống hút màu** lấy màu bất kỳ trên màn hình.
-
-### ⚡ Điều chỉnh hàng loạt & phím tắt
-- Chọn các thẻ màu rồi bấm **Điều chỉnh** để **xoay sắc độ / bão hòa / độ sáng** cho toàn
-  bộ lựa chọn với xem trước trực tiếp; **Đặt lại** để phục hồi, **Hủy** để quay lại.
+### ⚡ 3. Điều chỉnh hàng loạt & phím tắt
+- Chọn các màu rồi bấm **Điều chỉnh** để **xoay sắc độ / bão hoà / độ sáng**, xem trước trực tiếp; **Đặt lại** để phục hồi, **Hủy** để quay lại.
 - **Ctrl/Cmd + Z** hoàn tác · **Ctrl/Cmd + Shift + Z** (hoặc **Ctrl + Y**) làm lại
 - **Ctrl/Cmd + A** chọn tất cả · **Delete / Backspace** xóa các màu đang chọn
-- Menu **Trùng lặp**: đánh dấu, xóa mã trùng hoàn toàn, hoặc xóa màu gần giống nhau.
+- Menu **Trùng lặp**: đánh dấu · xóa mã trùng hoàn toàn · xóa màu gần giống nhau.
 
-### ➡ Đưa kết quả về Xem ACO
-Mọi công cụ tạo màu đều có thể chuyển kết quả về palette chính:
-- **Random**, **Bảng hài hòa**, **Lấy màu từ ảnh**, **Gradient** và **kết quả trộn** đều có
-  nút **Nạp vào Xem ACO** — tiếp tục chỉnh như một màu bình thường.
+### 🌈 4. Gradient .grd
+- Mở file gradient Photoshop (`.grd` **v3 & v5**) — dạng solid và noise.
+- Chỉnh điểm màu, điểm trong suốt, điểm giữa, độ mượt, tham số noise; thêm / xóa gradient và điểm dừng.
+- **Lưu lại file `.grd`** · copy CSS · xuất SVG · trích màu ra `.aco` · nạp vào tab ACO.
 
-### 📋 Sao chép
-- Click thẻ màu để copy mã (**HEX / RGB / HSL** — tùy chọn).
-- **Copy tất cả** dưới dạng: danh sách HEX, CSS variables, SCSS, JSON, RGB, **Tailwind config**, **Styled Components**.
+### 🎨 5. Trộn màu
+- Thêm màu bằng ô chọn màu hoặc **mở file ACO** ngay trong tab; lưới chọn lọc để bỏ màu không muốn trộn.
+- Tỷ lệ tự chia đều, kéo thanh trượt để chỉnh riêng từng màu; **cân bằng tỷ lệ** bằng một click.
+- Bấm vào dòng **HEX / RGB / HSL** của kết quả để copy · **lưu vào lịch sử** · **nạp vào tab ACO**.
+- Click ô màu của chip để đổi màu ngay trong lúc đang trộn.
 
-### 🎨 Trộn màu (dùng độc lập — không cần mở ACO)
-- Thêm màu bằng **ô chọn màu** hoặc **mở file ACO** ngay trong tab này.
-- Lưới chọn lọc giúp **loại bỏ màu không muốn trộn** bằng một click.
-- **Chỉnh lại lựa chọn** mà không cần tải lại file.
-- Tỷ lệ **tự động chia đều** theo số lượng màu; kéo thanh trượt để chỉnh riêng.
-- **Lịch sử trộn** tự lưu, click để copy lại.
-
-### 🎲 Random màu (cho từng thành viên)
-- Sinh 1–100 màu ngẫu nhiên cho từng "thành viên", hoàn toàn ngẫu nhiên hoặc theo họ màu (đỏ / cam / vàng / xanh lá / cyan / xanh dương / tím / hồng), có chế độ không trùng màu.
-
-### 🛠 Công cụ thiết kế
-Tách thành 2 tab — **🧩 Tạo màu** và **🔍 Phân tích**:
-- **Palette Generator** — complementary / analogous / triadic / split / tetradic.
-- **Gradient Generator** — gradient CSS tuyến tính / hướng tâm / **conic**, copy mã CSS.
-- **Image → Palette / Chấm màu** — chấm vào ảnh lấy màu, trích màu chủ đạo, và **xuất thẳng ra .aco**.
-- **Presets & Templates** — thư viện cài sẵn: Material Design, Tailwind, Brand Colors, Pastel, Earth Tones.
-- **Contrast Checker** — tỷ lệ tương phản WCAG kèm huy hiệu AA/AAA.
-- **Accessibility Audit** — % màu trong palette đạt AA khi ghép với chữ trắng/đen.
-- **Palette Statistics** — độ bão hòa/độ sáng trung bình và biểu đồ phân bố sắc độ.
-- **Color Blindness Preview** — protanopia / deuteranopia / tritanopia / grayscale.
-- **Bảng chi tiết màu** — HEX / RGB / HSL / HSV / CMYK / Lab, độ sáng, tương phản.
-- **Phát hiện trùng lặp** và **tìm màu tương tự**.
-
-### 📦 Xử lý nhiều file (Batch)
-- Mở **nhiều file .aco** cùng lúc, **gộp** thành một palette (có chế độ bỏ trùng) hoặc **xuất .aco gộp**.
-
-### 🔗 Chia sẻ palette
-- Tạo **link chia sẻ** (`?palette=...`) mã hóa palette hiện tại — ai mở link cũng thấy cùng màu, không cần server.
-
-### 📐 Gradient (.grd)
-- Mở file **gradient Photoshop** (`.grd`, **v3 & v5**) — dạng solid và noise.
-- **Xem trước** từng gradient, rồi **chỉnh sửa** điểm màu, điểm trong suốt, điểm giữa, độ mượt, và các tham số noise (seed, roughness, min/max).
-- **Thêm / xóa gradient** và điểm dừng, rồi **lưu lại file `.grd`**.
-- Xuất gradient ra **CSS `linear-gradient`** hoặc **SVG**, và **trích màu ra `.aco`** hoặc nạp thẳng vào Viewer.
-
-### ⬇ Xuất
-- **PNG / SVG / CSS / JSON / TXT** với tùy chọn bố cục, kích thước, nhãn, nền (kể cả trong suốt).
-- **Xuất .aco** (v2, có tên màu) từ các màu đã chọn.
+### 🎲 6. Random màu
+- Sinh 1–100 màu cho từng "thành viên", ngẫu nhiên hoàn toàn hoặc theo họ màu (8 họ), có chế độ không trùng.
+- Click màu để copy · nút giọt màu để chỉnh tay từng màu · **nạp vào tab ACO**.
 
 ### 🌙 Giao diện — Liquid Glass (chỉ nền tối)
-- Chất liệu **Liquid Glass**: blur nền thật kèm tăng bão hòa, viền khúc xạ và gờ sáng ở mép trên của các bề mặt kính.
+- **Liquid Glass**: blur nền thật kèm tăng bão hoà, viền khúc xạ và gờ sáng ở mép trên các bề mặt kính.
 - **Chỉ chạy nền tối** — giao diện gần như không màu để màu của bạn là thứ duy nhất lên màu.
-- Gọn từ 7 tab rời rạc xuống **4 nhóm: Xem · Tạo · Phân tích · Tệp**.
-- Dùng **icon SVG nét** thay emoji, hệ thống chữ có phân cấp rõ ràng, chuyển động chỉ ở mức màu sắc/độ mờ — không nảy, không phát sáng.
-- Ánh sáng nền phía sau lớp kính nhuốm theo bảng màu bạn đang mở.
-- Tương thích tốt trên màn hình nhỏ.
+- **4 tab: Màu ACO · Gradient .grd · Trộn màu · Random.**
+- Icon **SVG nét** thay emoji, phân cấp chữ rõ ràng, chuyển động chỉ ở mức màu/độ mờ — không nảy, không phát sáng.
+- Ánh sáng nền sau lớp kính nhuốm theo bảng màu đang mở · tương thích tốt trên màn hình nhỏ.
 
 ### ⚙️ Cài đặt
 - **Ngôn ngữ** — Tiếng Việt / English.
@@ -129,11 +85,11 @@ Tách thành 2 tab — **🧩 Tạo màu** và **🔍 Phân tích**:
 Mở `index.html` bằng trình duyệt bất kỳ (nhấp đúp), hoặc truy cập link đã deploy.
 
 ### Quy trình nhanh
-1. Mở tab **📁 Xem ACO** → kéo thả file `.aco`.
-2. Click màu để copy, hoặc tick nhiều màu để xuất.
-3. Mở tab **🎨 Trộn màu** → thêm màu → xem kết quả trộn ngay.
-4. Bấm **⬇ Xuất ảnh & dữ liệu** để tải bảng màu.
-5. Mở tab **📐 Gradient** → kéo thả file `.grd` để xem và chỉnh sửa gradient Photoshop.
+1. Mở tab **Màu ACO** → kéo thả file `.aco`.
+2. Click thẻ màu để copy · nút giọt màu để chỉnh · bút chì để đổi tên.
+3. Chọn nhiều màu rồi bấm **Điều chỉnh** để đổi sắc độ / độ sáng cả lô.
+4. Bấm **Lưu .aco** để tải bảng màu đã chỉnh về máy.
+5. Mở tab **Gradient .grd** → kéo thả file `.grd` để xem và chỉnh gradient Photoshop.
 6. Mở **⚙️ Cài đặt** (hoặc bấm **VI / EN** ở thanh trên cùng) để đổi ngôn ngữ và cỡ chữ.
 
 ---

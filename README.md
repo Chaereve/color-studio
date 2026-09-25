@@ -19,94 +19,49 @@ A tool to **view, mix, and export Photoshop (`.aco`) color palettes** — runnin
 
 ## ✨ Features
 
-### 📁 View ACO
-- Drag & drop (or click) a `.aco` file to open it.
-- Supports **ACO v1 & v2**, reads **color names** and the RGB / HSB / CMYK / Lab / Grayscale color spaces.
-- Each color shows an **index number**, name, HEX, RGB and its original color space.
-- **Search** by name/HEX/RGB and **sort** by hue, lightness, saturation, or name.
-- **Advanced search** — filter by ranges with `hue:0-60`, `sat:>50`, `light:40-80`, or find near-colors with `similar:#FF0000`.
+### 📁 1. View & edit ACO colors
+- Drag-and-drop (or click) to open an `.aco` file. Supports **ACO v1 & v2**, reading **color names** and RGB / HSB / CMYK / Lab / Grayscale spaces.
+- Every color shows its index, name, HEX, RGB and original color space.
+- **Search** by name/HEX/RGB · **sort** by hue / lightness / saturation / name.
+- Advanced filters: `hue:0-60` · `sat:>50` · `light:40-80` · `similar:#FF0000`.
+- **Add / delete / rename / drag-to-reorder** · full **undo / redo** (60 steps) · **save back to .aco**.
+- **Right-click** a swatch for the quick menu.
 
-### ✏️ Edit palette (in-place)
-- **Rename** colors inline, **delete**, or **add** new colors — then **save back to .aco**.
-- Full **undo / redo** (up to 60 steps).
-- **Right-click** any swatch for a quick menu (copy / details / rename / export / delete).
+### 🎛 2. One color editor, everywhere
+- A **droplet button** on every ACO swatch, every random card, and every mixer chip's color square.
+- Every other color swatch (.grd stops, base colors…) opens that same editor.
+- **SV square + hue slider**, live **old → new** preview, typeable **HEX / RGB / HSL**.
+- **Revert** jumps back to the original color · **Add** creates a new swatch instead of replacing one.
+- An **eyedropper** button (Chromium) picks any color off the screen.
+- Every change goes through **undo**.
 
-### 🎛 Edit any color, anywhere
-One shared **color editor** opens wherever a color appears — so you always get the same
-picker instead of a different control on every screen:
-- **Viewer** — the droplet button on every swatch card.
-- **Mixer** — click the chip's color square to re-tint it and the mix updates instantly.
-- **Random** — the droplet button on each generated card.
-- **Harmony, Gradient, Contrast, Palette-from-image, .grd stops** — click any native
-  color swatch (or the HEX label under a gradient stop) to open the editor.
-- Inside the editor: **SV square + hue slider**, live **old → new** preview, and
-  **HEX / RGB / HSL** fields you can type into. **Revert** jumps back to the original
-  color; **Add** creates a new swatch instead of replacing one (where it applies).
-- On Chromium browsers an **eyedropper** button picks any color off the screen.
-
-### ⚡ Bulk adjust & shortcuts
-- Select swatches, then **Điều chỉnh** to **rotate hue / saturation / lightness** across
-  the whole selection with a live preview; **Reset** restores, **Cancel** rolls back.
+### ⚡ 3. Bulk adjust & shortcuts
+- Select colors, hit **Adjust** to **rotate hue / saturation / lightness** with a live preview; **Reset** restores, **Cancel** rolls back.
 - **Ctrl/Cmd + Z** undo · **Ctrl/Cmd + Shift + Z** (or **Ctrl + Y**) redo
-- **Ctrl/Cmd + A** select all colors · **Delete / Backspace** delete the selected colors
-- **Duplicate** menu: mark duplicates, remove identical codes, or remove near-identical colors.
+- **Ctrl/Cmd + A** select all · **Delete / Backspace** delete the selected colors
+- **Duplicates** menu: mark · remove identical codes · remove near-identical colors.
 
-### ➡ Send results to the Viewer
-Every generator can hand its colors back to the main palette:
-- **Random**, **Harmony**, **Palette-from-image**, **Gradient**, and the **mix result**
-  all have a **Load into Viewer** button, so their colors become ordinary swatches you
-  can keep editing.
+### 🌈 4. .grd gradients
+- Open Photoshop gradient files (`.grd` **v3 & v5**) — solid and noise forms.
+- Edit color stops, transparency stops, midpoints, smoothness, noise parameters; add / remove gradients and stops.
+- **Save back to `.grd`** · copy CSS · export SVG · extract colors to `.aco` · send to the ACO tab.
 
-### 📋 Copy
-- Click a swatch to copy its code (**HEX / RGB / HSL** — selectable).
-- **Copy all** as: HEX list, CSS variables, SCSS, JSON, RGB, **Tailwind config**, or **Styled Components**.
+### 🎨 5. Mix colors
+- Add colors with the color picker or **open an ACO file** right in the tab; a selection grid lets you exclude colors.
+- Ratios auto-equalize; drag a slider to tweak each one; **equalize** everything in one click.
+- Click the result's **HEX / RGB / HSL** row to copy · **save to history** · **send to the ACO tab**.
+- Click a chip's color square to retint it mid-mix.
 
-### 🎨 Mix colors (standalone — no ACO required)
-- Add colors with the **color picker** or **open an ACO file** right in this tab.
-- A selection grid lets you **exclude colors you don't want to mix** with one click.
-- **Re-adjust your selection** without re-uploading the file.
-- Ratios **auto-equalize** by color count; drag a slider to tweak each one.
-- **Mix history** is saved automatically; click to copy again.
-
-### 🎲 Random colors (per member)
-- Generate 1–100 random colors for each "member", either fully random or within a chosen color family (red / orange / yellow / green / cyan / blue / purple / pink), with optional no-duplicate mode.
-
-### 🛠 Design tools
-Grouped under the **Create** and **Analyze** tabs:
-- **Palette Generator** — complementary / analogous / triadic / split / tetradic.
-- **Gradient Generator** — linear / radial / **conic** CSS gradient with copy-to-clipboard.
-- **Image → Palette / Eyedropper** — click an image to pick a color, extract dominant colors, and **export them straight to .aco**.
-- **Presets & Templates** — built-in Material Design, Tailwind, Brand Colors, Pastel and Earth Tones palettes.
-- **Contrast Checker** — WCAG ratio with AA/AAA badges.
-- **Accessibility Audit** — % of the palette passing AA against white/black text.
-- **Palette Statistics** — average saturation/lightness and a hue-distribution chart.
-- **Color Blindness Preview** — protanopia / deuteranopia / tritanopia / grayscale.
-- **Color detail panel** — HEX / RGB / HSL / HSV / CMYK / Lab, luminance, contrast.
-- **Duplicate detector** and **similar-color finder**.
-
-### 📦 Batch processing
-- Open **multiple .aco files** at once, then **merge** them into one palette (with optional dedup) or **export a merged .aco**.
-
-### 🔗 Share palette
-- Generate a **shareable link** (`?palette=...`) that encodes the current palette — anyone opening the link sees the same colors, no server needed.
-
-### 📐 Gradient (.grd)
-- Open Photoshop **gradient files** (`.grd`, **v3 & v5**) — solid and noise gradients.
-- **Preview** each gradient, then **edit** color stops, transparency stops, midpoint, smoothness, and noise parameters (seed, roughness, min/max).
-- **Add / remove gradients** and stops, then **save back to `.grd`**.
-- Export a gradient as **CSS `linear-gradient`** or **SVG**, and **extract its colors to `.aco`** or straight into the Viewer.
-
-### ⬇ Export
-- **PNG / SVG / CSS / JSON / TXT** with layout, size, label and background options (including transparent).
-- **ACO export** (v2, with color names) of your selected colors.
+### 🎲 6. Random colors
+- Generate 1–100 colors, one per "member", fully random or within a color family (8 families), with an optional no-duplicate mode.
+- Click to copy · droplet button to hand-tune each one · **send to the ACO tab**.
 
 ### 🌙 UI — Liquid Glass (dark only)
-- **Liquid Glass** material: real backdrop blur with saturation, refractive rims and a specular top edge on glass surfaces.
-- **Dark only** — the interface stays achromatic so your palette is the only thing in colour.
-- **4 tab groups** instead of 7 scattered tabs: **View · Create · Analyze · Files**.
-- **Stroke SVG icons** instead of emoji, a restrained type system, and motion limited to colour/opacity — no bouncing or glow.
-- The ambient light behind the glass picks up the colours of the palette you have open.
-- Responsive down to small phones.
+- **Liquid Glass**: real backdrop blur with saturation, refractive rims and a top highlight on glass surfaces.
+- **Dark only** — an almost achromatic UI so your colors are the only colorful thing.
+- **4 tabs: ACO colors · .grd gradients · Mix · Random.**
+- Stroke **SVG icons** instead of emoji, clear type hierarchy, motion limited to color/opacity — no bounce, no glow.
+- The ambient light behind the glass is tinted by the palette you have open · works well on small screens.
 
 ### ⚙️ Settings
 - **Language** — Tiếng Việt / English.
@@ -130,11 +85,11 @@ Grouped under the **Create** and **Analyze** tabs:
 Just open `index.html` in any browser (double-click it), or visit the deployed URL.
 
 ### Quick flow
-1. Open the **📁 View ACO** tab → drag & drop a `.aco` file.
-2. Click a color to copy it, or tick several colors to export them.
-3. Open the **🎨 Mix colors** tab → add colors → see the mix result instantly.
-4. Click **⬇ Export image & data** to download the palette.
-5. Open the **📐 Gradient** tab → drop a `.grd` file to view and edit Photoshop gradients.
+1. Open the **ACO colors** tab → drag & drop a `.aco` file.
+2. Click a card to copy · the droplet to edit · the pencil to rename.
+3. Select several colors, then hit **Adjust** to shift hue / lightness in bulk.
+4. Hit **Save .aco** to download the edited palette.
+5. Open the **Gradients** tab → drop a `.grd` file to view and edit Photoshop gradients.
 6. Open **⚙️ Settings** (or use **VI / EN** in the header) to switch language and font size.
 
 ---
