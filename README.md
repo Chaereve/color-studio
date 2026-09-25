@@ -31,6 +31,32 @@ A tool to **view, mix, and export Photoshop (`.aco`) color palettes** — runnin
 - Full **undo / redo** (up to 60 steps).
 - **Right-click** any swatch for a quick menu (copy / details / rename / export / delete).
 
+### 🎛 Edit any color, anywhere
+One shared **color editor** opens wherever a color appears — so you always get the same
+picker instead of a different control on every screen:
+- **Viewer** — the droplet button on every swatch card.
+- **Mixer** — click the chip's color square to re-tint it and the mix updates instantly.
+- **Random** — the droplet button on each generated card.
+- **Harmony, Gradient, Contrast, Palette-from-image, .grd stops** — click any native
+  color swatch (or the HEX label under a gradient stop) to open the editor.
+- Inside the editor: **SV square + hue slider**, live **old → new** preview, and
+  **HEX / RGB / HSL** fields you can type into. **Revert** jumps back to the original
+  color; **Add** creates a new swatch instead of replacing one (where it applies).
+- On Chromium browsers an **eyedropper** button picks any color off the screen.
+
+### ⚡ Bulk adjust & shortcuts
+- Select swatches, then **Điều chỉnh** to **rotate hue / saturation / lightness** across
+  the whole selection with a live preview; **Reset** restores, **Cancel** rolls back.
+- **Ctrl/Cmd + Z** undo · **Ctrl/Cmd + Shift + Z** (or **Ctrl + Y**) redo
+- **Ctrl/Cmd + A** select all colors · **Delete / Backspace** delete the selected colors
+- **Duplicate** menu: mark duplicates, remove identical codes, or remove near-identical colors.
+
+### ➡ Send results to the Viewer
+Every generator can hand its colors back to the main palette:
+- **Random**, **Harmony**, **Palette-from-image**, **Gradient**, and the **mix result**
+  all have a **Load into Viewer** button, so their colors become ordinary swatches you
+  can keep editing.
+
 ### 📋 Copy
 - Click a swatch to copy its code (**HEX / RGB / HSL** — selectable).
 - **Copy all** as: HEX list, CSS variables, SCSS, JSON, RGB, **Tailwind config**, or **Styled Components**.

@@ -31,6 +31,31 @@ Công cụ **xem, trộn và xuất bảng màu Photoshop (`.aco`)** — chạy 
 - **Hoàn tác / làm lại** đầy đủ (tối đa 60 bước).
 - **Chuột phải** thẻ màu để mở menu nhanh (copy / chi tiết / đổi tên / xuất / xóa).
 
+### 🎛 Chỉnh màu ở mọi mục — một trình duy nhất
+Một **trình chỉnh màu** dùng chung mở ra ở bất cứ đâu có màu, nên bạn luôn gặp cùng một
+bộ điều khiển thay vì mỗi chỗ một kiểu:
+- **Xem ACO** — nút giọt màu trên mỗi thẻ màu.
+- **Trộn màu** — click vào ô màu của chip để đổi, kết quả trộn cập nhật ngay.
+- **Random** — nút giọt màu trên từng thẻ màu sinh ra.
+- **Bảng hài hòa, Gradient, Tương phản, Lấy màu từ ảnh, các điểm dừng .grd** — click vào
+  ô chọn màu (hoặc mã HEX dưới một điểm dừng gradient) để mở trình chỉnh.
+- Trong trình: **ô SV + thanh sắc độ**, xem trước **cũ → mới** trực tiếp, và các ô
+  **HEX / RGB / HSL** gõ được. **Hoàn tác** về đúng màu ban đầu; **Thêm** tạo màu mới
+  thay vì thay thế (ở những nơi có hỗ trợ).
+- Trên trình duyệt Chromium có thêm nút **ống hút màu** lấy màu bất kỳ trên màn hình.
+
+### ⚡ Điều chỉnh hàng loạt & phím tắt
+- Chọn các thẻ màu rồi bấm **Điều chỉnh** để **xoay sắc độ / bão hòa / độ sáng** cho toàn
+  bộ lựa chọn với xem trước trực tiếp; **Đặt lại** để phục hồi, **Hủy** để quay lại.
+- **Ctrl/Cmd + Z** hoàn tác · **Ctrl/Cmd + Shift + Z** (hoặc **Ctrl + Y**) làm lại
+- **Ctrl/Cmd + A** chọn tất cả · **Delete / Backspace** xóa các màu đang chọn
+- Menu **Trùng lặp**: đánh dấu, xóa mã trùng hoàn toàn, hoặc xóa màu gần giống nhau.
+
+### ➡ Đưa kết quả về Xem ACO
+Mọi công cụ tạo màu đều có thể chuyển kết quả về palette chính:
+- **Random**, **Bảng hài hòa**, **Lấy màu từ ảnh**, **Gradient** và **kết quả trộn** đều có
+  nút **Nạp vào Xem ACO** — tiếp tục chỉnh như một màu bình thường.
+
 ### 📋 Sao chép
 - Click thẻ màu để copy mã (**HEX / RGB / HSL** — tùy chọn).
 - **Copy tất cả** dưới dạng: danh sách HEX, CSS variables, SCSS, JSON, RGB, **Tailwind config**, **Styled Components**.
