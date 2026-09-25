@@ -27,37 +27,49 @@
 ============================================================ */
 
 :root {
-    --bg: #07080c;
+    /* Nền: mực xanh đậm có sắc độ, thay vì đen xám phẳng */
+    --bg: #080a11;
+    --bg-lift: #0c1019;
 
-    --glass:    linear-gradient(157deg, rgba(255,255,255,.10), rgba(255,255,255,.032) 44%, rgba(255,255,255,.02));
-    --glass-hi: linear-gradient(157deg, rgba(255,255,255,.15), rgba(255,255,255,.055) 44%, rgba(255,255,255,.032));
-    --rim:      linear-gradient(150deg, rgba(255,255,255,.34), rgba(255,255,255,.06) 36%, rgba(255,255,255,0) 62%, rgba(255,255,255,.15));
-    --blur:     blur(30px) saturate(190%);
-    --blur-sm:  blur(18px) saturate(170%);
+    /* Kính: nhuốm xanh băng nhẹ thay vì trắng tinh */
+    --glass:    linear-gradient(158deg, rgba(168,193,255,.13), rgba(255,255,255,.042) 46%, rgba(255,255,255,.024));
+    --glass-hi: linear-gradient(158deg, rgba(190,214,255,.19), rgba(255,255,255,.07) 46%, rgba(255,255,255,.036));
+    --rim:      linear-gradient(150deg, rgba(205,225,255,.42), rgba(255,255,255,.08) 34%, rgba(255,255,255,0) 60%, rgba(190,215,255,.20));
+    --blur:     blur(32px) saturate(200%);
+    --blur-sm:  blur(20px) saturate(180%);
 
-    --text:   #eef1f7;
-    --text-2: #a3acbd;
-    --text-3: #6d7689;
+    --text:   #f4f7fd;
+    --text-2: #aab5ca;
+    --text-3: #6f7992;
 
-    --line:   rgba(255,255,255,.085);
-    --line-2: rgba(255,255,255,.16);
-    --line-3: rgba(255,255,255,.30);
+    --line:   rgba(255,255,255,.09);
+    --line-2: rgba(255,255,255,.18);
+    --line-3: rgba(255,255,255,.32);
 
-    --fill:   rgba(255,255,255,.055);
-    --fill-h: rgba(255,255,255,.10);
-    --danger: #f4796f;
-    --danger-bg: rgba(244,121,111,.14);
-    --warn:   #f2c14e;
+    --fill:   rgba(255,255,255,.06);
+    --fill-h: rgba(255,255,255,.105);
+
+    /* Điểm nhấn duy nhất — xanh băng, dùng rất ít để khỏi tranh với màu của người dùng */
+    --accent:      #9dc0ff;
+    --accent-deep: #4f7fd6;
+    --accent-fill: rgba(157,192,255,.13);
+    --accent-line: rgba(157,192,255,.36);
+
+    --danger: #ff7d75;
+    --danger-bg: rgba(255,125,117,.15);
+    --warn:   #f5c451;
 
     --r-xl: 26px;  --r-lg: 20px;  --r: 15px;  --r-sm: 11px;  --r-xs: 8px;
     --sh-1: 0 1px 2px rgba(0,0,0,.45);
     --sh-2: 0 10px 28px -14px rgba(0,0,0,.85);
     --sh-3: 0 30px 70px -28px rgba(0,0,0,.9);
 
-    --e-out:  cubic-bezier(.22, 1, .36, 1);
-    --e-io:   cubic-bezier(.6, 0, .35, 1);
-    --e-back: cubic-bezier(.34, 1.42, .64, 1);
-    --t1: .12s;  --t2: .2s;  --t3: .32s;  --t4: .5s;
+    /* Đường cong chuyển động: vào = giảm tốc, ra = tăng tốc, di chuyển = đường cong chuẩn của UI */
+    --e-out:  cubic-bezier(.16, 1, .3, 1);
+    --e-io:   cubic-bezier(.4, 0, .2, 1);
+    --e-in:   cubic-bezier(.55, 0, .9, .35);
+    --e-back: cubic-bezier(.34, 1.28, .64, 1);
+    --t1: .13s;  --t2: .22s;  --t3: .34s;  --t4: .5s;
 
     --rail: 252px;
 }
@@ -72,7 +84,12 @@ html[data-font="l"] { font-size: 17.5px; }
 
 body {
     min-height: 100vh;
-    background: var(--bg);
+    background:
+        radial-gradient(1100px 640px at 8% -14%,  rgba(52,76,158,.30), transparent 62%),
+        radial-gradient(900px  560px at 96% 2%,   rgba(96,58,166,.22), transparent 60%),
+        radial-gradient(1200px 700px at 46% 114%, rgba(14,96,116,.26), transparent 62%),
+        var(--bg);
+    background-attachment: fixed;
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI Variable Display',
                  'Segoe UI', system-ui, 'Helvetica Neue', Arial, sans-serif;
@@ -90,15 +107,15 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.26); background-clip: content-box; }
 
 /* ---------- Nền ---------- */
-.ambient { position: fixed; inset: -25%; z-index: -3; pointer-events: none; filter: blur(90px); opacity: .62; }
+.ambient { position: fixed; inset: -25%; z-index: -3; pointer-events: none; filter: blur(100px); opacity: .72; }
 .ambient i { position: absolute; display: block; border-radius: 50%; transition: background 1.6s var(--e-io); }
-.ambient i:nth-child(1) { width: 46vw; height: 46vw; left: 2%;  top: -6%;  background: #16203c; }
-.ambient i:nth-child(2) { width: 40vw; height: 40vw; right: 0%; top: 4%;   background: #241a33; }
-.ambient i:nth-child(3) { width: 52vw; height: 52vw; left: 26%; bottom: -18%; background: #102a2c; }
+.ambient i:nth-child(1) { width: 48vw; height: 48vw; left: -2%; top: -8%;  background: #22346e; }
+.ambient i:nth-child(2) { width: 42vw; height: 42vw; right: -2%; top: 2%;   background: #3a2368; }
+.ambient i:nth-child(3) { width: 56vw; height: 56vw; left: 22%; bottom: -20%; background: #0f4658; }
 .grain { position: fixed; inset: 0; z-index: -2; pointer-events: none; opacity: .04;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E"); }
 .vignette { position: fixed; inset: 0; z-index: -2; pointer-events: none;
-    background: radial-gradient(120% 80% at 50% 0%, transparent 40%, rgba(0,0,0,.55) 100%); }
+    background: radial-gradient(125% 85% at 50% 0%, transparent 36%, rgba(0,0,0,.5) 76%, rgba(0,0,0,.74) 100%); }
 
 /* ---------- Chất liệu kính ---------- */
 .glass {
@@ -106,7 +123,7 @@ body {
     border: 1px solid var(--line); border-radius: var(--r-lg);
     background: var(--glass);
     -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.13), inset 0 -1px 0 rgba(255,255,255,.035), var(--sh-2), var(--sh-3);
+    box-shadow: inset 0 1px 0 rgba(212,229,255,.17), inset 0 -1px 0 rgba(255,255,255,.04), var(--sh-2), var(--sh-3);
 }
 @supports (mask-composite: exclude) or (-webkit-mask-composite: xor) {
     .glass::before {
@@ -188,7 +205,7 @@ body {
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
     padding: 10px 14px;
     border-bottom: 1px solid var(--line);
-    background: rgba(9,11,16,.72);
+    background: rgba(9,12,20,.74);
     -webkit-backdrop-filter: var(--blur-sm); backdrop-filter: var(--blur-sm);
 }
 .mhead .brand-mark { width: 32px; height: 32px; border-radius: 10px; }
@@ -200,7 +217,7 @@ body {
     position: fixed; z-index: 70; left: 50%; transform: translateX(-50%);
     bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     display: flex; gap: 2px; padding: 4px; border-radius: 999px;
-    background: rgba(20,22,30,.82);
+    background: rgba(17,20,31,.84);
     -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
     border: 1px solid var(--line-2); box-shadow: var(--sh-3), inset 0 1px 0 rgba(255,255,255,.14);
     max-width: calc(100vw - 24px);
@@ -428,8 +445,8 @@ input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 5
 .chip.file-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 300px; }
 @keyframes pop { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: none; } }
 
-.workspace { padding: 14px; margin-bottom: 16px; }
-.ws-row { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.workspace { padding: 11px 12px; margin-bottom: 16px; }
+.ws-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .ws-row + .ws-row { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
 .ws-row .grow { flex: 1 1 0; min-width: 0; }
 .ws-row .divider { width: 1px; height: 22px; background: var(--line); margin: 0 3px; flex: none; }
@@ -437,7 +454,7 @@ input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 5
 
 .menu-wrap { position: relative; }
 .menu { position: absolute; top: calc(100% + 8px); left: 0; z-index: 70; min-width: 210px;
-    max-width: calc(100vw - 36px); padding: 5px; border-radius: var(--r); background: rgba(22,24,32,.92);
+    max-width: calc(100vw - 36px); padding: 5px; border-radius: var(--r); background: rgba(18,21,32,.93);
     -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
     border: 1px solid var(--line-2); box-shadow: var(--sh-3), inset 0 1px 0 rgba(255,255,255,.12);
     opacity: 0; transform: translateY(-8px) scale(.97); transform-origin: top left; pointer-events: none;
@@ -736,7 +753,7 @@ input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 5
     transition-delay: 0s;
     -webkit-backdrop-filter: blur(10px) saturate(120%); backdrop-filter: blur(10px) saturate(120%); }
 .modal { width: 100%; max-width: 620px; max-height: 88vh; overflow-y: auto; border-radius: var(--r-xl);
-    background: rgba(20,22,30,.9);
+    background: rgba(16,19,30,.9);
     -webkit-backdrop-filter: blur(34px) saturate(190%); backdrop-filter: blur(34px) saturate(190%);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.16), var(--sh-3);
     transform: translateY(16px) scale(.965); opacity: 0;
@@ -827,7 +844,7 @@ input[type="range"].ed-hue::-moz-range-thumb { width: 14px; height: 14px; border
     transform: translateX(-50%) translateY(0); z-index: 300;
     display: flex; align-items: center; gap: 9px; padding: 11px 18px; border-radius: 999px;
     max-width: min(92vw, 520px); font-size: .82rem; font-weight: 550; color: var(--text);
-    background: rgba(24,26,35,.9);
+    background: rgba(19,22,33,.92);
     -webkit-backdrop-filter: blur(26px) saturate(180%); backdrop-filter: blur(26px) saturate(180%);
     border: 1px solid var(--line-2); box-shadow: var(--sh-3), inset 0 1px 0 rgba(255,255,255,.16);
     transition: bottom var(--t4) var(--e-back), opacity var(--t3) var(--e-out), transform var(--t4) var(--e-back);
@@ -837,7 +854,6 @@ input[type="range"].ed-hue::-moz-range-thumb { width: 14px; height: 14px; border
 #toast .i { color: var(--text-2); flex: none; }
 #toast .msg { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-footer { text-align: center; color: var(--text-3); font-size: .74rem; line-height: 1.7; padding: 22px 16px 8px; }
 
 /* ============================================================
    CHUYỂN TRANG
@@ -870,6 +886,63 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
     .adj-row label { width: 88px; }
 }
 
+/* ============================================================
+   CHUYỂN ĐỘNG — vào giảm tốc (ease-out), ra tăng tốc (ease-in),
+   di chuyển theo đường cong chuẩn của UI; không nảy lò xo, không rung
+============================================================ */
+
+/* Đổi tab: hiện nhanh và mượt thay vì kéo dài */
+.tab-section.active { animation: paneIn var(--t3) var(--e-out) both; }
+@keyframes paneIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* Nhấn: lún 1px, rất nhanh — đủ để biết là đã bấm */
+.btn:active, .tool-btn:active { transform: translateY(1px) scale(.985); transition-duration: var(--t1); }
+.nav-item:active { transform: scale(.985); transition-duration: var(--t1); }
+.dock-item:active { transform: scale(.93); transition-duration: var(--t1); }
+
+/* Vạch trượt ở điều hướng: đường cong chuẩn của UI, 260ms là vừa đọc được */
+.rail-nav::before {
+  background: var(--accent); box-shadow: 0 0 14px -2px rgba(157,192,255,.8);
+  transition: transform var(--t3) var(--e-io), height var(--t3) var(--e-io), opacity var(--t2) var(--e-out);
+}
+.dock::before { transition: transform var(--t3) var(--e-io), width var(--t3) var(--e-io), opacity var(--t2) var(--e-out); }
+
+/* Thẻ màu: xuất hiện so le ngắn, nhấc khi trỏ vào — không phóng to */
+.swatch { animation: cardIn var(--t3) var(--e-out) both; animation-delay: calc(var(--i, 0) * 18ms); }
+.swatch:hover { border-color: var(--line-2); box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 14px 30px -16px rgba(0,0,0,.9); }
+.swatch:active { transform: translateY(-1px) scale(.99); transition-duration: var(--t1); }
+.rand-card:hover { box-shadow: 0 14px 30px -16px rgba(0,0,0,.9); }
+
+/* Modal: bung ra giảm tốc + chút bật; đóng lại tăng tốc */
+.modal { transform: translateY(12px) scale(.975); opacity: 0;
+  transition: transform var(--t2) var(--e-in), opacity var(--t2) var(--e-in); }
+.modal-overlay.open .modal { transform: none; opacity: 1;
+  transition: transform var(--t3) var(--e-back), opacity var(--t3) var(--e-out); }
+
+/* Toast: trượt lên gọn, không nảy */
+#toast { transition: bottom var(--t3) var(--e-out), opacity var(--t2) var(--e-out); }
+
+/* Menu xổ: thả xuống rồi mới mờ dần vào */
+.menu { transform: translateY(-6px) scale(.98);
+  transition: opacity var(--t2) var(--e-out), transform var(--t2) var(--e-out); }
+.menu.open { transform: none; }
+
+/* Điểm nhấn xanh băng: vòng focus, vạch trượt, ô chọn, nút kéo */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.swatch.selected .check { background: var(--accent); color: #0a0c12; }
+.swatch.just-copied .check { background: var(--accent); color: #0a0c12; }
+input[type="checkbox"]:checked { background: var(--accent); border-color: var(--accent); }
+input[type="checkbox"]:checked::after { border-color: #0a0c12; }
+input[type="range"]::-webkit-slider-thumb { background: var(--accent); }
+input[type="range"]::-moz-range-thumb { background: var(--accent); }
+input[type="range"].ed-hue::-webkit-slider-thumb { background: var(--accent); }
+input[type="range"].ed-hue::-moz-range-thumb { background: var(--accent); }
+.pick-item.selected { box-shadow: inset 0 0 0 1.5px var(--accent); }
+.pick-item.selected .ck { background: var(--accent); border-color: transparent; color: #0a0c12; }
+.seg button.active { background: var(--accent-fill); color: var(--accent); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 0 0 1px var(--accent-line); }
+.grd-item.active { box-shadow: inset 0 0 0 1.5px var(--accent-line); }
+.hue-btn.active .dotc { box-shadow: 0 0 0 2px var(--accent); }
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: .01ms !important; animation-iteration-count: 1 !important;
@@ -887,17 +960,17 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <symbol id="i-tick" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
 <symbol id="i-logo" viewBox="0 0 24 24"><path d="M15 8.824C15 11.455 13 12 12 12s-3-.545-3-3.176C9 6.192 12 3 12 3s3 3.192 3 5.824zM3 15l.872.697a2.33 2.33 0 0 0 3.102-.171v0a2.33 2.33 0 0 1 3.164-.122l.18.154c.968.83 2.396.83 3.364 0l.18-.154a2.33 2.33 0 0 1 3.164.121v0a2.33 2.33 0 0 0 3.102.172L21 15m-.5 4-.442.442c-.86.86-2.255.86-3.116 0v0a2.203 2.203 0 0 0-2.99-.114l-.27.23c-.968.83-2.396.83-3.364 0l-.27-.23a2.203 2.203 0 0 0-2.99.114v0c-.86.86-2.255.86-3.116 0L3.5 19"/></symbol>
-<symbol id="i-colors" viewBox="0 0 24 24"><path d="M9 6H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h4M9 6v12M9 6h6M9 18h6m0 0h4a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4m0 12V6"/></symbol>
-<symbol id="i-gradient" viewBox="0 0 24 24"><path d="M5 20V4m14 16V4"/><rect width="10" height="4" x="10" y="17" rx="2" transform="rotate(-90 10 17)"/></symbol>
+<symbol id="i-colors" viewBox="0 0 24 24"><path d="M3 8V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2M3 8v6m0-6h6m12 0v6m0-6H9m12 6v4a2 2 0 0 1-2 2H9m12-6H9m-6 0v4a2 2 0 0 0 2 2h4m-6-6h6m0-6v6m0 0v6m6-12v12"/></symbol>
+<symbol id="i-gradient" viewBox="0 0 24 24"><path d="M4 5h16M4 19h16"/><rect width="10" height="4" x="7" y="10" rx="2"/></symbol>
 <symbol id="i-flask" viewBox="0 0 24 24"><path d="M8 3h2m6 0h-2m0 0v5.46a2 2 0 0 0 .272 1.007L15.75 12l3.495 5.992c.778 1.334-.184 3.008-1.727 3.008H6.482c-1.544 0-2.505-1.674-1.727-3.008L8.25 12l1.478-2.533A2 2 0 0 0 10 8.459V3m4 0h-4"/></symbol>
-<symbol id="i-star" viewBox="0 0 24 24"><path d="M9 8c-1.667.667-5.4 2.7-7 5.5m9.5-2.5C9.167 12.333 4 16.4 2 22m10.5-7.5c-1.167 1.167-3.8 4.1-5 6.5m7.174-14.55.673-3.285 2.225 2.51 3.027-.294-1.768 3.062 1.743 2.639-3.286-.673-2.51 2.225.19-3.156-3.062-1.768 2.768-1.26z"/></symbol>
+<symbol id="i-random" viewBox="0 0 24 24"><path d="M17 7a5.001 5.001 0 0 0-4.607 3.053C11.963 11.07 12.896 12 14 12h6c1.105 0 2.037-.93 1.607-1.947A5.001 5.001 0 0 0 17 7zm0 10a5.001 5.001 0 0 0-3.053-4.607C12.93 11.963 12 12.896 12 14v6c0 1.105.93 2.037 1.947 1.607A5.001 5.001 0 0 0 17 17zM7 17a5.001 5.001 0 0 0 4.607-3.053C12.037 12.93 11.104 12 10 12H4c-1.105 0-2.037.93-1.607 1.947A5.001 5.001 0 0 0 7 17zM7 7a5.001 5.001 0 0 0 3.053 4.607C11.07 12.037 12 11.104 12 10V4c0-1.105-.93-2.037-1.947-1.607A5.001 5.001 0 0 0 7 7z"/></symbol>
 <symbol id="i-search" viewBox="0 0 24 24"><path d="m20 20-4.05-4.05m0 0a7 7 0 1 0-9.9-9.9 7 7 0 0 0 9.9 9.9z"/></symbol>
 <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 5v0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v0M8 5v0a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v0"/></symbol>
 <symbol id="i-list-check" viewBox="0 0 24 24"><path d="M11 5h10M11 9h5"/><rect width="4" height="4" x="3" y="5" rx="1"/><path d="M11 15h10m-10 4h5"/><rect width="4" height="4" x="3" y="15" rx="1"/></symbol>
-<symbol id="i-filter" viewBox="0 0 24 24"><path d="M18 4H6c-1.105 0-2.026.91-1.753 1.98a8.018 8.018 0 0 0 4.298 5.238c.823.394 1.455 1.168 1.455 2.08v6.084a1 1 0 0 0 1.447.894l2-1a1 1 0 0 0 .553-.894v-5.084c0-.912.632-1.686 1.454-2.08a8.017 8.017 0 0 0 4.3-5.238C20.025 4.91 19.103 4 18 4z"/></symbol>
+<symbol id="i-duplicates" viewBox="0 0 24 24"><path d="M18 9V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9m16-4v7a2 2 0 0 1-2 2h-2m4-9c-6.442 0-9.105 1.985-11.055 4.243M2 13v4a1 1 0 0 0 1 1v0h11M2 13c1.403-.234 2.637-.293 4.945.243M14 18c-1.704-2.768-4.427-4.148-7.055-4.757M6.5 5C6 5 5 5.3 5 6.5S6 8 6.5 8 8 7.7 8 6.5 7 5 6.5 5z"/><path d="M22 6v12a4 4 0 0 1-4 4H6"/></symbol>
 <symbol id="i-save" viewBox="0 0 24 24"><path d="M8 4H4v16h16V8l-4-4h-2M8 4v4h6V4M8 4h6m-2 8c-.667 0-2 .4-2 2s1.333 2 2 2 2-.4 2-2-1.333-2-2-2z"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h7m7 0h-7m0 0V5m0 7v7"/></symbol>
-<symbol id="i-adjust" viewBox="0 0 24 24"><path d="M20 4 4 20M4 7h3m3 0H7m0 0V4m0 3v3m7 7h6"/></symbol>
+<symbol id="i-adjust" viewBox="0 0 24 24"><path d="M4 12h3m3 0H7m0 0V9m0 3v3m7-3h6"/></symbol>
 <symbol id="i-undo" viewBox="0 0 24 24"><path d="M4 9v5h5m11 2c-.497-4.5-3.367-8-8-8-2.73 0-5.929 2.268-7.294 5.5"/></symbol>
 <symbol id="i-redo" viewBox="0 0 24 24"><path d="M20 9v5h-5M4 16c.497-4.5 3.367-8 8-8 2.73 0 5.929 2.268 7.294 5.5"/></symbol>
 <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 15v-3m0-3v0"/></symbol>
@@ -911,15 +984,10 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
 <symbol id="i-file" viewBox="0 0 24 24"><path d="M20 9v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8m6 6v-.172a2 2 0 0 0-.586-1.414l-3.828-3.828A2 2 0 0 0 14.172 3H14m6 6h-4a2 2 0 0 1-2-2V3"/></symbol>
 <symbol id="i-file-plus" viewBox="0 0 24 24"><path d="M19 16v3m0 0v3m0-3h3m-3 0h-3m4-10v-.172a2 2 0 0 0-.586-1.414l-3.828-3.828A2 2 0 0 0 14.172 3H14m6 6h-4a2 2 0 0 1-2-2V3m6 6v3m-6-9H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"/></symbol>
 <symbol id="i-reload" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m13 8 2 2-2 2m0-2h-1c-1 0-3 .6-3 3s2 3 3 3c.534 0 1.353-.171 2-.695"/></symbol>
-<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v3.764a2 2 0 0 0 1.106 1.789L16 14"/></symbol>
 <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M4 14 14 3v7h6L10 21v-7H4z"/></symbol>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m19 12-6-6m6 6-6 6m6-6H5"/></symbol>
-<symbol id="i-code" viewBox="0 0 24 24"><path d="M7 8h5m3 0h2m0 4h-6m-3 0H7m0 4h5m3 0h2M3 8V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></symbol>
-<symbol id="i-image" viewBox="0 0 24 24"><path d="M21 12V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v11m18-4v7a2 2 0 0 1-2 2h-3m5-9c-6.442 0-10.105 1.985-12.055 4.243M3 16v3a2 2 0 0 0 2 2v0h11M3 16c1.403-.234 3.637-.293 5.945.243M16 21c-1.704-2.768-4.427-4.148-7.055-4.757M8.5 7C8 7 7 7.3 7 8.5S8 10 8.5 10 10 9.7 10 8.5 9 7 8.5 7z"/></symbol>
-<symbol id="i-check" viewBox="0 0 24 24"><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 5v0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v0M8 5v0a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v0"/><path d="m9 14 2 2 4-5"/></symbol>
 <symbol id="i-hand" viewBox="0 0 24 24"><path d="M20 20v-3a4 4 0 0 0-4-4h-1a1 1 0 0 1-1-1V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v10l-2.4-3.2A2 2 0 0 0 6 12h-.382C4.724 12 4 12.724 4 13.618v0c0 .251.058.499.17.724L7 20"/></symbol>
 <symbol id="i-scale" viewBox="0 0 24 24"><path d="m10 6 2 5m0 0h3a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3z"/><path d="M17 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m3 12h4"/></symbol>
-<symbol id="i-eye" viewBox="0 0 24 24"><path d="M12 5c-6.307 0-9.367 5.683-9.91 6.808a.435.435 0 0 0 0 .384C2.632 13.317 5.692 19 12 19s9.367-5.683 9.91-6.808a.435.435 0 0 0 0-.384C21.368 10.683 18.308 5 12 5z"/><circle cx="12" cy="12" r="3"/></symbol>
 </defs></svg>
 
 <div class="ambient" id="ambient"><i></i><i></i><i></i></div>
@@ -944,7 +1012,7 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
             <svg class="i"><use href="#i-flask"/></svg><span data-i18n="tab.mixer">Mix</span>
         </button>
         <button class="nav-item tab" data-tab="rand" role="tab" type="button" aria-selected="false">
-            <svg class="i"><use href="#i-star"/></svg><span data-i18n="tab.random">Random</span>
+            <svg class="i"><use href="#i-random"/></svg><span data-i18n="tab.random">Random</span>
         </button>
     </nav>
     <div class="rail-foot">
@@ -955,7 +1023,7 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
             <svg class="i"><use href="#i-settings"/></svg>
         </button>
     </div>
-    <p class="rail-note" data-i18n="rail.note">Open a .aco or .grd file to start. Everything stays on your device.</p>
+    <p class="rail-note" data-i18n="rail.note">Local &middot; Private &middot; Offline</p>
 </aside>
 
 <main class="main">
@@ -1038,7 +1106,7 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
                     </div>
                     <div class="menu-wrap">
                         <button class="tool-btn" id="dedupe-btn" type="button" title="Find duplicate colors">
-                            <svg class="i sm"><use href="#i-filter"/></svg><span data-i18n="dedupe.btn">Duplicates</span>
+                            <svg class="i sm"><use href="#i-duplicates"/></svg><span data-i18n="dedupe.btn">Duplicates</span>
                             <svg class="i sm caret"><use href="#i-chevron"/></svg>
                         </button>
                         <div class="menu right" id="dedupe-menu">
@@ -1055,7 +1123,7 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
                         <svg class="i sm"><use href="#i-save"/></svg><span data-i18n="export.aco">Export .aco</span>
                     </button>
                 </div>
-                <p class="hint" data-i18n-html="hint.search">Advanced filters: similar:#FF0000 &middot; hue:0-60 &middot; sat:&gt;50 &middot; light:40-80</p>
+                <p class="hint" data-i18n-html="hint.search">Filters: similar:#HEX &middot; hue:0-60 &middot; sat:&gt;50 &middot; light:40-80</p>
             </div>
 
             <div class="ws-block">
@@ -1079,7 +1147,7 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
                         <svg class="i sm"><use href="#i-save"/></svg><span data-i18n="edit.save">Save .aco</span>
                     </button>
                 </div>
-                <p class="hint" data-i18n="edit.hint">Click a card to copy &middot; pen to edit &middot; pencil to rename &middot; bin to delete &middot; drag to reorder &middot; right-click for the quick menu</p>
+                <p class="hint" data-i18n="edit.hint">Click card to copy &middot; drag to reorder &middot; right-click for menu</p>
             </div>
         </div>
 
@@ -1275,11 +1343,6 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
         </div>
     </div>
 </section>
-
-        <footer data-i18n-html="footer">
-            <b>Chaereve ColorLab</b> &middot; View, edit and mix Photoshop palettes and gradients in your browser.<br>
-            Everything is processed locally on your device — nothing is uploaded.
-        </footer>
     </div>
 </main>
 
@@ -1294,7 +1357,7 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
         <svg class="i"><use href="#i-flask"/></svg><span data-i18n="tab.mixer">Mix</span>
     </button>
     <button class="dock-item tab" data-tab="rand" role="tab" type="button" aria-selected="false">
-        <svg class="i"><use href="#i-star"/></svg><span data-i18n="tab.random">Random</span>
+        <svg class="i"><use href="#i-random"/></svg><span data-i18n="tab.random">Random</span>
     </button>
 </nav>
 
@@ -1469,7 +1532,7 @@ footer { text-align: center; color: var(--text-3); font-size: .74rem; line-heigh
 </div>
 
 <div id="toast" role="status" aria-live="polite">
-    <svg class="i sm"><use href="#i-check"/></svg><span class="msg" data-i18n="toast.copied">Copied</span>
+    <svg class="i sm"><use href="#i-tick"/></svg><span class="msg" data-i18n="toast.copied">Copied</span>
 </div>
 
 <div id="ctx-menu" class="ctx-menu"></div>
@@ -1485,23 +1548,23 @@ const ic = (n, c) => '<svg class="i' + (c ? ' ' + c : '') + '" aria-hidden="true
 const I18N = {
 en:
 {
-"rail.note":"Open a .aco or .grd file to begin. Everything is processed on your device.",
+"rail.note":"Local &middot; Private &middot; Offline",
 "eyebrow.aco":".aco swatches",
 "pane.aco.title":"Color palette",
-"pane.aco.sub":"Open a Photoshop swatch file, browse it, edit any color and save it back.",
+"pane.aco.sub":"Browse swatches, inspect color codes, and edit or export your palette.",
 "eyebrow.grd":".grd gradients",
 "pane.grd.title":"Photoshop gradients",
-"pane.grd.sub":"Open a .grd file, pick a gradient from the list, and edit its stops on the right.",
+"pane.grd.sub":"Inspect gradient stops, tweak color ramps, and save to Photoshop .grd.",
 "grd.files":"Files",
 "grd.editor":"Editor",
 "grd.editor.sub":"Pick a gradient on the left to edit it.",
 "eyebrow.mix":"Mixer",
 "pane.mix.title":"Mix colors",
-"pane.mix.sub":"Blend any colors with adjustable ratios, then send the result to your palette.",
+"pane.mix.sub":"Blend colors with weighted ratios and send results back to your palette.",
 "mixer.history.hint":"Click an entry to copy it again.",
 "eyebrow.rand":"Generator",
 "pane.rand.title":"Random colors",
-"pane.rand.sub":"Generate one color per member, fully at random or inside a color family.",
+"pane.rand.sub":"Generate distinct randomized palettes or explore color families.",
 "tab.mixer":"Mix",
 "tab.random":"Random",
 "drop.main":"Drag & drop a <b>.aco</b> file here",
@@ -1612,7 +1675,7 @@ en:
 "edit.undo":"Undo",
 "edit.redo":"Redo",
 "edit.save":"Save .aco",
-"edit.hint":"Use the icons to rename or delete a color",
+"edit.hint":"Click card to copy · drag to reorder · right-click for menu",
 "edit.rename.title":"Rename color",
 "edit.delete.title":"Delete this color",
 "toast.addedColor":"Added {hex}",
@@ -1680,7 +1743,7 @@ en:
 "settings.about.desc":"<b>Chaereve ColorLab</b> reads, edits and mixes Photoshop color palettes and gradients (.aco &middot; .grd) right in your browser &mdash; no install needed. Interface language: English. Icons: <b>Majesticons</b> (MIT). Everything is processed locally on your device; nothing is uploaded.",
 "sect.random":"Random colors",
 "grd.drop.main":"Drag & drop a <b>.grd</b> file here",
-"hint.search":"Advanced filters: similar:#FF0000 · hue:0-60 · sat:&gt;50 · light:40-80",
+"hint.search":"Filters: similar:#HEX · hue:0-60 · sat:&gt;50 · light:40-80",
 "editor.title":"Edit color",
 "editor.apply":"Apply",
 "editor.revert":"Revert",
